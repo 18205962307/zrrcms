@@ -1,0 +1,14 @@
+/*Rfloat css*/
+.Rfloat{ position:fixed; left:50%; top:50%; margin-left:510px; }
+.Rfloat a,.Rfloat .bdsharebuttonbox a.bds_qzone,.Rfloat .bdsharebuttonbox a.bds_weixin{ display:block; background:url(../img/Rfloat.png) no-repeat; width:50px; height:50px; overflow:hidden;padding:0px;margin:0px;}
+.Rfloat .home a{background-position:0px 0px; }
+.Rfloat .home a:hover{background-position:-50px 0px;}
+.Rfloat .bdsharebuttonbox a.bds_qzone{background-position:0px -51px;  height:49px; }
+.Rfloat .bdsharebuttonbox a:hover.bds_qzone{background-position:-50px -51px;}
+.Rfloat .bdsharebuttonbox a.bds_weixin{background-position:0px -101px;  height:49px; }
+.Rfloat .bdsharebuttonbox a:hover.bds_weixin{background-position:-50px -101px;}
+.Rfloat .gototop a{background-position:0px -160px;margin-top:10px; display:none;}
+.Rfloat .gototop a:hover{background-position:-50px -160px;}
+/*处理ie6下 fixed问题*/
+*body{background-image:url(about:blank);background-attachment:fixed;/*必要，防抖动*/}
+*html .Rfloat{ position:absolute; left:expression('50%');top:expression(eval(document.documentElement.scrollTop+400))}

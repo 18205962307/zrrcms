@@ -1,0 +1,58 @@
+
+.meitu_zt{ width:1000px; margin:0 auto; overflow:hidden;}
+
+.listtitle{ height:45px;color:#919191; font-size:12px; width:1000px; margin: 0 auto; overflow: hidden; }
+.listtitle p{font-family:"宋体"; height:45px; line-height:45px;}
+.listtitle p a{color:#686868;}
+.listtitle p a:hover{color:#c39;}
+.listtitle p em{ padding:0 5px;}
+.listtitle i{ color:#919191;}
+
+.breadnav{ color:#ddd; padding:12px 0px;}
+.breadnav em{ padding:0px 5px;}
+.breadnav a{ color:#9f9f9f;}
+.breadnav a:hover{ color:#c39;}
+
+.star-mx{ float:left; width:980px; overflow: hidden; border:1px solid #ddd;  padding:8px; box-shadow:0px 5px 5px  #ddd;}
+.star-mx .star-img{ float:left; width:202px; height:300px; overflow:hidden; font:normal 18px/43px "微软雅黑"; text-align:center; color:#5b5b5b;}
+.star-mx .star-img img{ border:10px solid #f6f6f6; width:182px; height:237px;}
+
+.star-mx .star-text{ float:left; width:778px; height:178px; *height:178px; outline:none; overflow:hidden; overflow-y:auto; }
+.star-mx .star-text h1{ float:left; width:738px; height:30px; overflow:hidden; font:normal 16px/30px "微软雅黑"; margin:0 20px 10px; }
+.star-mx .star-text p{float:left; width:738px;  font: normal 14px/25px "微软雅黑"; padding:0px 20px; margin-bottom:18px; text-indent:2em; color:#666; }
+
+.star-mx .fenxiang{ float:left; width:778px; margin-top:5px;}
+.star-mx .fenxiang .fx_left{ float:left; width:214px; margin-right:5px;}
+.star-mx .fenxiang .fx_left .fx_left_h35{ float:left; width:125px; height:35px; background:#f6f6f6; margin:20px 0; padding-left:89px; font:normal 12px/35px "宋体"; color:#9f9f9f; position:relative;}
+.star-mx .fenxiang .fx_left em{ float:left; width: 60px; height:60px; overflow:hidden; background:url(../img/fx_2.png) no-repeat 0 0; margin:-15px 8px 0 20px; position:absolute; left:0; top:0; cursor:pointer;}
+.star-mx .fenxiang .fx_left b{ font-weight:normal;}
+.star-mx .fenxiang .fx_left em.hover,.star-mx .fenxiang .fx_left .addon em{ background:url(../img/fx_2.png) no-repeat 0 -60px; }
+.star-mx .fenxiang .fx_left i.icon-eyes{margin-left:5px; display:inline-block; width:20px; height:16px; background:url(../img/hot.png) no-repeat 0px 0px;vertical-align:middle; overflow:hidden;}
+
+.star-mx .fenxiang .fx_con{ float:left; width:144px; margin-right:5px;}
+.star-mx .fenxiang .fx_con .fx_left_h35{ float:left; width:134px; height:35px; background:#f6f6f6; margin:20px 0; font:normal 12px/35px "宋体"; color:#9f9f9f; padding-left:10px;}
+.star-mx .fenxiang .fx_con a{ display:inline-block; width:28px;  background:url(../img/weibo_icon_2.png) no-repeat; text-indent:-9999px;}
+.star-mx .fenxiang .fx_con a.sinaweibo{ background-position:0px 0px;}
+.star-mx .fenxiang .fx_con a.tenxunweibo{background-position:-28px 0px;}
+.star-mx .fenxiang .fx_con a.sinaweibo:hover{ background-position:0px -35px;}
+.star-mx .fenxiang .fx_con a.tenxunweibo:hover{background-position:-28px -35px;}
+
+
+.star-mx .fenxiang .fx_right{ float:left; width:380px; height:35px; padding:0 15px; background:#f6f6f6; margin:20px 0; font:normal 12px/35px "宋体"; color:#9f9f9f; position:relative;}
+
+/*明星图片*/
+
+.star_img{ float:left; width:1000px; overflow:hidden; margin-top:15px;}
+.star_img .st_title{ float:left; width:1000px; height:40px; overflow:hidden; border-bottom:1px solid #e8e8e8; margin-bottom:15px;}
+.star_img .st_title a{ float:left; height:38px; overflow:hidden; font: normal 16px/38px "微软雅黑"; color:#666; border-bottom:2px solid #9f9f9f; margin-bottom:-1px;}
+.star_img .st_title .ston{border-bottom:2px solid #d42591; color:#d42591}
+.star_img .st_title i{ float:left; width:22px; height:22px; display:block; margin:8px 5px 0 0;}
+.star_img .st_title .ston .gq{ width:22px; height:22px; color:#d42591; background:url(../img/meitu_2.jpg) no-repeat -2px -25px }
+
+#con{ width:1015px;overflow:hidden;zoom:1;}
+.star_img ul{ float:left; width:1015px;}
+.star_img li{ float:left; width:188px;  overflow:hidden; margin:0 15px 15px 0; position:relative;}
+.star_img li img{ width:188px;}
+.star_img li span{ float:left; width:100%; height:35px; overflow:hidden; color:#FFF; display:block; text-align:center; font:normal 14px/35px "微软雅黑"; position:absolute; left:0; bottom:0;}
+.star_img li em{ float:left; width:100%; height:35px; overflow:hidden; color:#FFF; display:block; text-align:center; background:#333; filter:alpha(opacity=70);  
+      -moz-opacity:0.7;  -khtml-opacity: 0.7; opacity: 0.7; position:absolute; left:0; bottom:2px;}

@@ -1,0 +1,66 @@
+
+/* 内容页 CSS */
+.headtop{ width:980px;!important}
+
+.titleline{ width:980px; margin:0 auto; color:#666; margin-bottom:10px;overflow:hidden;position:relative;}
+.titinfo{ float:left; width:300px; }
+.titleline h1{ font-family:"Microsoft Yahei", simsun; font-size:25px; font-weight:normal;}
+.titleline p a{ color:#999;}
+.titleline p a:hover{ color:#FD6274;}
+.pictopline{ height:30px; line-height:30px; padding:9px 0px 0px;color:#9f9f9f; float:right;margin-right:10px;}
+.pictopline div{float:left;}
+.pictopline i,.zan a i.icon-good{ display:inline-block; width:20px; height:30px; background:url(../img/iconbg_2.png) no-repeat;  _background:url(../img/iconbg_2.gif) no-repeat; vertical-align:middle; overflow:hidden;}
+.pictopline i.icon-time{ background-position:0px -93px;}
+.pictopline i.icon-fx{ background-position:0px -124px; margin-left:5px;}
+.pictopline i.icon-jianz{ background-position:0px -152px; margin-left:5px;}
+.pictopline i.icon-jiany{ background-position:0px -182px; margin-right:5px;}
+.pictopline p{white-space:nowrap; position:absolute;right:20px;text-align:left;padding-left:0px; }
+
+
+.picline{ position:relative;}
+.picline a.pre,.picline a.next{ position:absolute; margin-top:-45px; text-indent:-9999px; top:50%; display:block; background:url(../img/bg.png) no-repeat; width:52px; height:90px;}
+.picline a.pre{ left:0px; background-position:-286px -364px;}
+.picline a.next{ right:0px; background-position:-348px -364px;}
+.picline a.pre:hover{ background-position:-286px -469px;}
+.picline a.next:hover{ background-position:-348px -469px;}
+.picbox{ width:980px; margin:0 auto; padding-bottom:18px; border-bottom:1px solid #D8D8D8;}
+.picbox p{ margin-top:20px; text-align:center;}
+.picbox img{ max-width:980px;text-align:center;margin:auto;}
+.pictext{display:none;}
+
+.tagline{ width:980px; margin:0 auto; border-top:1px solid #fff; padding:10px 0px; color:#999; font-size:12px;}
+.tags{ float:left;}
+.tags a{ padding:4px 5px; color:#fff; border-radius:2px; background-color:#FD6274; margin-right:4px;}
+.tags a:hover{ color:#fff;}
+.picinfo{ float:right; position:relative; padding-left:24px;}
+.picinfo i.ping-icon{ background:url(../img/bg.png) no-repeat  0 -547px; display: inline-block; width:18px; height:13px; position:absolute; top:3px; left:0px;}
+.picinfo a{ color:#999;}
+.picinfo a:hover{ color:#FD6274;}
+.picinfo em{ padding:0px 10px; font-weight:normal; color:#C5C5C5;}
+.picinfo .zan a{ display:inline-block; padding:0px 5px; height:26px; line-height:26px; background-color:#9F9F9F; color:#fff; border-radius:4px; }
+.picinfo .zan a i.icon-good{ background-position:0px -333px;width:30px;}
+.picinfo .zan a:hover,.picinfo .zan a.addon{  background-color:#FD6274;}
+.picinfo .zan a b{ font-weight:normal;color:#fff;margin-left:-5px}
+
+
+.recommendbox{ width:980px; margin:0 auto; overflow:hidden;}
+.biaoyu{ font-size:15px; color:#666; padding:10px 0px;}
+.xiangguan{ padding:15px; padding-bottom:0px; background-color:#fff; margin-top:20px;}
+.xiangguan ul{ width:980px;}
+.xiangguan ul li{ float:left; padding-right:18px; padding-bottom:18px;}
+.xiangguan ul li a{ display:block;}
+.xiangguan ul li a img{ width:224px; height:140px;}
+
+.relation{ padding:15px; background-color:#555; width:1170px; margin-bottom:25px; overflow:hidden; margin-top:20px;}
+.relation ul{ width:1200px;}
+.relation ul li{ float:left; position:relative; margin-right:15px;}
+.relation ul li a{ display:block;}
+.relation ul li a img{ width:185px; height:115px;}
+.relation ul li.xgxl a{ background:url(../img/jxxl.jpg) no-repeat center center #FD6274; width:150px; height:115px;}
+.relation ul li p{ background-color:#000; height:25px; line-height:25px; padding:0px 10px; color:#fff; position:absolute; top:0px; left:0px;}
+
+.adv980{ width:980px; height:100px; overflow:hidden;}
+
+/*经过图集效果-尺寸相关*/
+ul.picul li a p.bg{  width:204px; height:120px; line-height:120px;}
+ul.picul li a p.text{  width:204px; height:120px; line-height:120px;}

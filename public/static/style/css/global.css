@@ -1,0 +1,73 @@
+@import url(/style/css/Rfloat.css);
+*html{background-image:url(about:blank);background-attachment:fixed;}
+body {font-family: "宋体";font-size: 12px;margin:0 auto;padding:0;color:#111111; background: #FFF;}
+div, form, img, ul, ol, li, dl, dt, dd {margin: 0;padding: 0;border:0;}
+li {list-style-type:none;}
+* {margin:0;padding:0;}
+em,h1,h2,h3,h4,h5,h6,i {font-size:100%;font-style:normal;}
+img{border:0}
+body, html {height:100%;}
+em {font-weight:normal;}
+/* link */
+a{color: #5D5D5D;text-decoration:none;}
+a:visited {}
+a:hover {color: #cc3399;text-decoration:none;}
+a:active {}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1;}
+.clear{clear:both;}
+.clearh10{clear:both;width:100%;height:10px;overflow:hidden;}
+.clearh20{clear:both;width:100%;height:20px;overflow:hidden;}
+.adv96090,.adv100090{text-align: center; color:#ddd; margin:auto;clear:both;}
+.at10{ margin-top:10px;}
+.at20{ margin-top:20px;}
+.atm10{ margin:10px auto;}
+.at20{ margin:20px auto 0px auto;}
+.atm20{ margin:20px auto;}
+
+
+/* header */
+.headerline{ height:60px; line-height:60px;  background-color:#262626;}
+.header{ width:1000px; margin:0 auto; }
+.header a.logo{ display:block; width:167px; height:60px; background:url(../logo/logo.png) no-repeat 0px 0px #262626; overflow:hidden; text-indent:-9999px; float:left; margin-right:30px;}
+.header ul.topulnav{ float:left;}
+.header ul.topulnav li{ float:left; /*width:72px;*/ font-size:14px; position:relative; z-index:100;}
+.header ul.topulnav li a{ display:block; padding:0 15px; color:#9f9f9f; background-color:#262626;}
+.header ul.topulnav li a:hover{ color:#fff;}
+.header ul.topulnav li a.havechild{ background:url(../img/iconbg_2.png) no-repeat 54px -372px; _background:url(../img/iconbg_2.gif) no-repeat 54px -372px; padding-right:25px; padding-left:21px;}
+.header ul.topulnav li a.havechild:hover{ background-position:54px 28px;}
+.header ul.topulnav li.on a{ background-color:#3E3E3E; color:#fff;}
+.header ul.topulnav li a:hover{ background-color:#3E3E3E; color:#fff;}
+.header ul.topulnav .childnav{ display:none; position:absolute; font-size:12px; text-align:center;}
+.header ul.topulnav .childnav p a{ display:inline-block; height:30px; line-height:30px; width:75px; padding:0px; background-color:#3E3E3E; color:#9F9F9F;}
+.header ul.topulnav .childnav p a:hover{ background-color:#262626; color:#fff;}
+.headright{ float:right;}
+.pub_search{ float:left; height:30px; padding:15px 0px;}
+.pub_search form{ display:block; float:left; height:30px; line-height:30px; padding:0px 5px; background-color:#666; border-radius:6px; overflow:hidden;}
+.pub_search form input{ float:left;}
+.pub_search form input.text{ background-color:#666; height:20px; line-height:20px; padding:5px; width:175px; border:0px; color:#9f9f9f; outline:none;}
+.pub_search form input.search_btn{  background:url(../img/iconbg_xb_2.png) no-repeat 5px -60px #666; width:30px; height:30px; border:0px; cursor:pointer; }
+.downapp{ float:left; margin-left:20px; margin-top:15px; display:block; height:30px; line-height:30px; padding:0px 5px; color:#fff; background-color:#FF5B90; border-radius:6px;}
+.downapp:hover{ color:#fff;}
+
+/*分页*/
+.page{ text-align:center; padding:15px 0px;}
+.page a,.page b{ display:inline-block; height:28px; line-height:28px; border:1px solid #E8E8E8; background-color:#f6f6f6; color:#9f9f9f; padding:0px 12px; margin:0 4px; border-radius:4px;}
+.page b,.page a:hover{ background-color:#9F9F9F; color:#fff; border:1px solid #9F9F9F;}
+.page .pageON,.page a.preon,.page a.nexton{display:none;}
+
+
+/* footer */
+.footer{ border-top:1px solid #E8E8E8; width:1000px; margin:0 auto; margin-top:20px; padding:40px 0px;}
+.footer p{ color:#9B9B9B; text-align:center; line-height:24px;}
+
+
+/*左右分页*/
+#back-to-top{position:fixed;top:30%;z-index: 999999; margin-left:510px; left:50%;}
+#back-to-top a{ width: 50px;height: 50px;display: block;overflow: hidden;text-indent: -999px;background: url(../img/bgpic_2.png) no-repeat -215px -628px;}
+#back-to-top a:hover{background: url(../img/bgpic_2.png) no-repeat -215px -681px;} 
+
+#back-to-top .prenextpagebtn{ margin-bottom:20px;}
+#back-to-top .prenextpagebtn a.prepagebtn{ background-position:-215px -1499px;}
+#back-to-top .prenextpagebtn a.nextpagebtn{ background-position:-215px -1451px;}

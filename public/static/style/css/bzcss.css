@@ -1,0 +1,52 @@
+@import url(/style/css/Rfloat.css);
+body{font: 12px/1.75 "simsun","Arial",sans-serif; background-color:#F0F0F0;}
+body,div,p,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input{ margin:0; padding:0}
+ul,ol{ list-style:none;}
+a{ color:#333; text-decoration:none;}
+a:hover{ color:#FD6274; text-decoration:none;}
+a:active {star:expression(this.onFocus=this.blur());}/*处理ie下链接虚线问题*/
+img{ border:0px; vertical-align:bottom;}
+em{ font-style:normal;}
+.clear{ clear:both;}
+.clearfix:after {content: ""; display: block; clear: both;}
+.clearfix {zoom: 1;}
+
+/*header css*/
+.header{ background-color:#4A4A4A; height:65px; margin-bottom:15px;}
+.headtop{ width:1200px; margin:0 auto;}
+.logo{ float:left; margin-left:15px; _margin-left:8px; margin-top:8px;}
+.logo a{ display:block; background:url(../logo/bzlogo.png) no-repeat; width:160px; height:48px; text-indent:-9999px;}
+.headercate{ float:left; margin-left:60px; margin-top:18px; position: relative;  z-index:1000;}
+.headercate a.cate-btn{ display:block; width:70px; height:28px; background:url(../img/bg.png) no-repeat; _background:url(../img/fenlei.gif) no-repeat; text-indent:-9999px;}
+.headercate a.on-cate-btn{ display:block; width:70px; height:28px; background:url(../img/bg.png) no-repeat -80px 0; _background:url(../img/fenlei.gif) no-repeat -80px 0; text-indent:-9999px;}
+.whiteblank{ background-color:#fff; width:70px; height:19px;}
+.navbox{ position: absolute; z-index:1000; font-size:12px;}
+.navlist{ background-color:#fff; padding:15px 15px 25px 15px; *padding:15px 15px 15px 15px; width:455px;}
+.navlist ul{ float:left; width:100px; border-right:1px solid #ddd;}
+.navlist ul p{ height:30px; line-height:30px; overflow:hidden; padding-left:15px; padding-right:10px;}
+.tagnav{ float:left; /*background-color:#ccc;*/ width:320px; padding-left:15px; padding-right:15px; border-left:1px solid #EBEBEB; margin-left:-1px;}
+.tagnav p{ height:42px; line-height:42px; border-bottom:1px dashed #D2D2D2;}
+.tagnav p.lastline{ border-bottom:0px;}
+.tagnav p em{ padding:0 10px;}
+.tagnav p a{ padding:6px 10px;}
+.tagnav p a:hover{ background-color:#FD6274; color:#fff;}
+
+.searchbar{ float:right;}
+.searchbar form{ background-color:#303030; position:relative; width:363px; position:relative; padding-left:10px; height:32px; /*overflow:hidden;*/ margin-right:20px; margin-top:17px;}
+.searchbar form label{ color:#AAAAAA; position:absolute; top:6px; left:12px;}
+.searchbar form input.so_keywords{ width:325px; float:left; /*margin-left:5px;*/ height:30px; line-height:30px; background-color:#303030; color:#AAAAAA; border:1px solid #303030; outline:none;}
+.searchbar form input.so_submit{ float:left; background:url(../img/bg.png) no-repeat -364px 0; width:36px; height:32px; border:0px; text-indent:-9999px; cursor:pointer;}
+
+/*后面加图片经过效果*/
+ul.picul li{ position:relative;}
+ul.picul li a p.bg{ position:absolute; top:0px; left:0px; text-align:center; color:#fff; background-color:#555; font-size:14px; font-family: "Microsoft Yahei", simsun; overflow:hidden; padding:10px; display:none;filter:alpha(opacity=90);opacity: 0.9;}
+ul.picul li a p.text{ position:absolute; top:0px; left:0px; text-align:center; color:#fff; font-size:14px; font-family: "Microsoft Yahei", simsun; overflow:hidden; padding:10px; display:none;}
+ul.picul li a:hover p{ display:block;}
+
+/*footer css*/
+.footer{ padding-top:10px; background-color:#4A4A4A; text-align:center; font-size:12px;color:#9B9B9B;}
+.footer p{text-align:center; line-height:25px;}
+
+.pictext{display:none;}
+/*Rfloat css*/
+.Rfloat{ position:fixed; left:50%; top:50%; margin-left:610px; }

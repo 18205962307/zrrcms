@@ -1,0 +1,34 @@
+/* 列表 */
+.mainer{ width:1000px; margin:0 auto; overflow:hidden;}
+.breadnav{ color:#ddd; padding:12px 0px;}
+.breadnav em{ padding:0px 5px;}
+.breadnav a{ color:#9f9f9f;}
+.breadnav a:hover{ color:#c39;}
+
+.interestline{ padding:18px 0px; height:25px; line-height:25px;color:#9F9F9F;}
+.interestline span{ float:right;}
+.interestline span b{ color:#FF5B90; font-weight:normal;}
+.interestline a{ display:inline-block; height:25px; line-height:25px; padding:0px 10px; background-color:#F6F6F6; color:#9F9F9F;}
+.interestline a:hover{ background-color:#FF5B90; color:#fff;}
+
+.piclist{}
+.piclist ul{ width:1015px;}
+.piclist li{ float:left; width:188px; height:312px; overflow:hidden; margin-right:15px; margin-bottom:15px;}
+.piclist li.hover{ background:#f7f7f7;}
+.piclist li a{ color:#717171; font:normal 12px/30px "宋体";}
+.piclist li a img{ float:left; width:188px; height:250px; overflow:hidden;}
+.piclist li a span{ float:left; width:178px; height:21px; overflow:hidden; padding:0 9px; margin-top:5px; margin-bottom:3px;}
+.piclist li a:hover span{ color:#cc3399;}
+.piclist li b{ float:left; background:url(../img/bgpic_2.png) no-repeat; width:60px; height:24px; line-height:24px; display:inline-block; overflow:hidden; padding-left:22px; font: normal 12px/20px "宋体"; color:#999999;}
+.piclist li .b1{ float:left; background-position:-241px -740px; margin-left:5px;}
+.piclist li .b2{ float:right; background-position:-241px -766px;}
+.piclist li.hover .b1{ background-position:-241px -569px;}
+.piclist li.hover .b2{ background-position:-241px -595px;}
+
+
+.tagnavline{ padding-top:15px; padding-bottom:10px; color:#999;}
+.tagtop{ font-family:"Microsoft Yahei", simsun; font-size:30px; color:#5d5d5d; padding-bottom:25px;}
+.tagtop em{ font-size:14px; vertical-align:top;margin-left:10px; line-height:42px; color:#999 }
+
+.jx_tit{ height:60px; margin:10px 0; font:normal 12px/60px "宋体"; color:#555;}
+.jx_tit span{ float:left; font:bold 25px/60px "微软雅黑"; margin-right:10px;}

@@ -1,0 +1,38 @@
+/* 列表 */
+.mainer{ width:1000px; margin:0 auto; overflow:hidden;}
+.breadnav{ color:#ddd; padding:12px 0px;}
+.breadnav em{ padding:0px 5px;}
+.breadnav a{ color:#9f9f9f;}
+
+.search_so{ width:460px; height:40px; margin:0 auto; padding:40px 0px 15px;}
+.search_so form{ display:block; float:left; width:448px; height:38px; background:#f6f6f6; border:1px solid #e8e8e8; line-height:38px; padding:0px 5px; border-radius:6px; overflow:hidden;}
+.search_so form input{ float:left;}
+.search_so form input.text_so{ width:400px;  height:28px; line-height:28px; background-color:#f6f6f6;padding:5px; border:0px; color:#333; }
+.search_so form input.btn_so{  background:url(../img/iconbg_xb_2.png) no-repeat 0 -90px #666; width:38px; height:38px; border:0px; cursor:pointer; }
+
+.searchline{ padding:10px 0px; height:25px; line-height:25px;color:#9F9F9F; border-bottom:1px solid #e8e8e8; margin-bottom:15px;}
+.searchline span{ float:left;}
+
+
+#con{ width:1015px;overflow:hidden;zoom:1;}
+#solist { width:1015px;}
+#solist li{ float:left; width:198px; overflow:hidden;  margin-bottom:15px;  display:inline; position:relative;}
+#solist li.hover{ background:#f7f7f7;}
+#solist li a{ color:#717171; font:normal 12px/30px "宋体";}
+#solist li a img{ float:left; width:188px; overflow:hidden;}
+#solist li a span{ float:left; width:178px; height:21px; overflow:hidden; padding:0 9px; margin-top:5px; margin-bottom:3px;}
+#solist li a:hover span{ text-decoration:none; color:#cc3399;}
+#solist li b{ float:left; background:url(../img/bgpic_2.png) no-repeat; width:60px; height:24px; line-height:24px; display:inline-block; overflow:hidden; padding-left:22px; font: normal 12px/20px "宋体"; color:#999999;}
+#solist li .b1{ float:left; background-position:-241px -740px; margin-left:5px;}
+#solist li .b2{ float:right; background-position:-241px -766px;}
+#solist li.hover .b1{ background-position:-241px -569px;}
+#solist li.hover .b2{ background-position:-241px -595px;}
+
+
+
+.page{ text-align:center; padding:15px 0px;}
+.page a{ display:inline-block; height:28px; line-height:28px; border:1px solid #E8E8E8; background-color:#f6f6f6; color:#9f9f9f; padding:0px 12px; margin:0 4px; border-radius:4px;}
+.page a.current,.page a:hover{ background-color:#9F9F9F; color:#fff; border:1px solid #9F9F9F;}
+
+
+.search_mei{ width:385px; height:62px; margin:0 auto;}

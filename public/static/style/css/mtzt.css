@@ -1,0 +1,99 @@
+
+.xiliebox{ width:1000px; margin:0 auto; overflow:hidden;}
+.adv100090{ margin-bottom:20px;text-align: center;padding: 20px 0px;background-color: #f5f5f5;}
+/*系列大图*/
+.xl_bigimg{ float:left; width:1000px; height:300px; overflow:hidden; margin:25px 0px; position:relative; }
+.xl_bigimg a{ float:left; width:1000px; height:300px; overflow:hidden; display:block;}
+.xl_bigimg img{ float:left; width:1000px; height:300px; }
+.xl_bigimg a.hover .text{ float:left; width:930px; height:60px; position:absolute; left:0; bottom:0; z-index:20;  display:block; padding-left:20px;  color:#FFF; }
+.xl_bigimg a.hover .text b { /*float:left;*/ width:930px; height:30px; line-height:30px; display:block; overflow:hidden; color:#FFF; font:normal 14px/30px "微软雅黑"; text-align:left;}
+.xl_bigimg a.hover .text p{font:normal 14px/20px "微软雅黑"; color:#b0aead; height:20px; line-height:20px; overflow:hidden; /*height:50px; overflow:hidden;*/}
+.xl_bigimg a.hover em{ display:block; width:960px; height:60px; opacity:.6; filter:alpha(opacity=60); z-index:1; background: #000; position:absolute; left:0; bottom:0; padding:0 20px;}
+.xl_bigimg a.hover i{ width:30px; height:30px; background: url(../img/tongtu3030.png) no-repeat; position:absolute; right:20px; bottom:15px; z-index:3; }
+
+
+/*系列320*/
+.xl_img320_660{ float:left; width:1000px; overflow:hidden;}
+.xl_img320_660 ul{ float:left; width:1020px; margin-bottom:0px;}
+.xl_img320_660 li { float:left; width:320px; height:300px; overflow:hidden; margin-right:20px;}
+.xl_img320_660 li a{ display:block; width:320px; height:320px; overflow:hidden; position:relative;}
+.xl_img320_660 li.hover a .text{ float:left; width:270px; height:50px; position:absolute; left:0; bottom:0; z-index:2;  display:block; padding-left:10px;}
+.xl_img320_660 li.hover a .text b { float:left; width:270px; height:30px; overflow:hidden; color:#FFF; font:normal 14px/30px "微软雅黑"; text-align:left;}
+.xl_img320_660 li.hover a .text p{font:normal 14px/20px "微软雅黑"; color:#b0aead;}
+.xl_img320_660 li.hover a em{ display:block; width:300px; height:60px; opacity:.6; filter:alpha(opacity=60); z-index:1; background:#000; position:absolute; left:0; bottom:0; padding:0 10px;}
+.xl_img320_660 li.hover a i{ float:right; width:30px; height:30px; background: url(../img/tongtu3030.png) no-repeat; position:absolute; right:10px; bottom:15px; z-index:3; }
+/*系列660*/
+.xl_img320_660 .tu660{ float:left; width:660px; height:320px; overflow:hidden;}
+.xl_img320_660 .tu660 a{ display:block; width:660px; height:320px; overflow:hidden; position:relative;}
+.xl_img320_660 .hover a .text{ float:left; width:610px; height:50px; margin-bottom:10px; overflow:hidden; position:absolute; left:0; bottom:0; z-index:2;  display:block; padding-left:10px;}
+.xl_img320_660 .hover a .text b { float:left; width:610px; height:30px; overflow:hidden; color:#FFF; font:normal 14px/30px "微软雅黑"; text-align:left;}
+.xl_img320_660 .hover a  .text p{font:normal 14px/20px "微软雅黑"; color:#b0aead;}
+.xl_img320_660 .hover a em{ display:block;/* width:660px;*/ height:60px; opacity:.6; filter:alpha(opacity=60); z-index:1; background:#000; position:absolute; left:0; bottom:0; }
+.xl_img320_660 .tu660 a em{width:660px;}
+.xl_img320_660 .tu660 a .text b{ width:600px !important;} 
+.xl_img320_660 .tu660 a .text{ width:600px !important;}
+.xl_img320_660 .hover a i{ float:right; width:30px; height:30px; background: url(../img/tongtu3030.png) no-repeat; position:absolute; right:10px; bottom:15px; z-index:3; }
+/*系列右下角320*/
+.xl_img320_660 .tu320{ float:right; width:320px; height:320px; overflow:hidden;}
+.xl_img320_660 .tu320 a{ display:block; width:320px; height:320px; overflow:hidden; position:relative;}
+.xl_img320_660 .hover a .text{ float:left; width:270px; height:50px; position:absolute; left:0; bottom:0; z-index:2;  display:block; padding-left:10px;}
+.xl_img320_660 .hover a .text b { float:left; width:270px; height:30px; overflow:hidden; color:#FFF; font:normal 14px/30px "微软雅黑"; text-align:left;}
+.xl_img320_660 .hover a  .text p{font:normal 14px/20px "微软雅黑"; color:#b0aead;}
+.xl_img320_660 .hover a em{ display:block; /*width:320px;*/ height:60px; opacity:.6; filter:alpha(opacity=60); z-index:1; background:#000; position:absolute; left:0; bottom:0; }
+.xl_img320_660 .tu320 a em{ width:320px;}
+.xl_img320_660 .hover a i{ float:right; width:30px; height:30px; background: url(../img/tongtu3030.png) no-repeat; position:absolute; right:10px; bottom:15px; z-index:3; }
+
+
+
+
+/*所有栏目同样式*/
+.fx_new{ float:left; width:1000px; margin-top:15px;}
+.fx_new .fx_title{ float:left; width:1000px; height:60px; line-height:60px; color:#999; font-size:14px; overflow:hidden;}
+.fx_new .fx_title a{ float:left; width:200px; height:60px; display:block; overflow:hidden; text-indent:-99999px; background:url(../img/bgpic_2.png) no-repeat 0 -258px; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../img/bgpic.png");}
+
+
+
+.fx_new ul{ float:left; width:1020px;}
+.fx_new li{ float:left; width:235px; height:235px; overflow:hidden; margin-right:20px; margin-bottom:10px;}
+.fx_new li:hover{ background:#f7f7f7;}
+.fx_new li a{ width:235px; height:235px; overflow:hidden; display:block; color:#717171; font:normal 12px/42px "宋体"; text-align:center;}
+.fx_new li a img{ float:left; width:235px; height:193px; overflow:hidden;}
+.fx_new li a span{ float:left; width:225px; height:42px; overflow:hidden; padding:0 5px; text-align:center; background:#FFF;}
+.fx_new li a:hover span{ text-decoration:none; color:#c39; background:#f7f7f7; }
+
+/* 内容 */
+.star_zt{ width:1000px; margin:0 auto; _overflow:hidden;}
+
+.poster{ width:1000px; height:220px; overflow:hidden; position:relative; margin:20px auto;}
+.star_big{ z-index: 1;width:1000px; height:220px; margin:0 auto;overflow: visible; background:#FFF; padding:15px 0 15px; }
+.star_txt { z-index: 2;width:1000px; height:220px; position:absolute; top:140px;}
+.star_txt h1{display:none;}
+.star_txt .writer{ position:absolute; right:20px; bottom:10px; color:#fff;}
+.star_txt .likesnum{ color:#fff; text-align:center; height:24px; line-height:24px; margin-bottom:15px;}
+.star_txt .likesnum span{}
+.star_txt .likebar{ margin-left:420px;}
+.star_txt .like,.star_txt .islike{ float:left; position:relative; display:block; width:40px; padding-left:40px; border-radius:4px; height:32px; line-height:32px; background:url(../img/like.gif) no-repeat; color:#555;}
+.star_txt .like:hover,.star_txt .islike:hover{ background-position:bottom; color:#fff;}
+.star_txt .islike{ background:url(../img/like.gif) no-repeat bottom; color:#fff;}
+.star_txt .fx{ margin-left:20px; float:left; background-color:#fff; height:32px; border-radius:4px; width:40px; overflow:hidden;}
+.star_txt .fxbox{ float:left; margin-top:3px; width:95px;}
+.star_txt .fxbtn{ background:url(../img/fx.gif) no-repeat; display:inline-block; border-radius:4px; float:left; /*display:block; float:left;*/ width:40px; height:32px; text-indent:-9999px;}
+
+
+.piclist{}
+.piclist ul{ width:1015px;}
+.piclist li{ float:left; width:188px; height:312px; overflow:hidden; margin-right:15px; margin-bottom:15px;}
+.piclist li.hover{ background:#f7f7f7;}
+.piclist li a{ color:#717171; font:normal 12px/30px "宋体";}
+.piclist li a img{ float:left; width:188px; height:250px; overflow:hidden;}
+.piclist li a span{ float:left; width:178px; height:21px; overflow:hidden; padding:0 9px; margin-top:5px; margin-bottom:3px;}
+.piclist li a:hover span{ text-decoration:none; color:#cc3399;}
+.piclist li b{ float:left; background:url(http://www.4493.com/images/20141113/bgpic_2.png) no-repeat; width:60px; height:24px; line-height:24px; display:inline-block; overflow:hidden; padding-left:22px; font: normal 12px/20px "宋体"; color:#999999;}
+.piclist li .c1{ float:left; background-position:-241px -740px; margin-left:5px;}
+.piclist li .c2{ float:right; background-position:-241px -766px;}
+.piclist li.hover .c1{ background-position:-241px -569px;}
+.piclist li.hover .c2{ background-position:-241px -595px;}
+
+.clickmore{ text-align:center; padding:25px 0px; border-top:1px solid #ccc; }
+.clickmore a{ display:block; width:300px; padding:10px 0px; margin:0 auto; text-align:center; background-color:#ddd; color:#333; font:16px "Microsoft Yahei", simsun;}
+.clickmore a:hover{ background-color:#555; color:#fff;}

@@ -1,0 +1,128 @@
+/* 列表 */
+.mainer{ width:1000px; margin:0 auto;}
+.breadnav{ color:#ddd; padding:12px 0px;}
+.breadnav em{ padding:0px 5px;}
+.breadnav a{ color:#9f9f9f;}
+.breadnav a:hover{ color:#c39;}
+
+
+.picmainer{ padding:19px; border:1px solid #E8E8E8;}
+.picmainer h1{ font-family:"Microsoft Yahei", simsun; font-size:25px; color:#5d5d5d; font-weight:normal;}
+.pictopline{ height:30px; line-height:30px; padding:9px 0px; margin-bottom:20px; color:#9f9f9f; border-bottom:1px solid #e8e8e8;}
+.pictopline p{height:30px; line-height:30px;}
+.pictopline p i{ display:inline-block; width:20px; height:30px; background:url(../img/iconbg_2.png) no-repeat;  _background:url(../img/iconbg_2.gif) no-repeat; vertical-align:middle; overflow:hidden;}
+.pictopline p i.icon-time{ background-position:0px -93px;}
+.pictopline p i.icon-fx{ background-position:0px -124px;}
+.pictopline p i.icon-jianz{ background-position:0px -152px; margin-left:5px;}
+.pictopline p i.icon-jiany{ background-position:0px -182px; margin-right:5px;}
+.pictopline p i.icon-list{ background-position:0px -212px; margin-right:5px;}
+.pictopline p i.icon-page{background:url(../img/icon-page.png) no-repeat 0px 5px; margin-right:5px;}
+.pictopline p.pleft{ float:left;}
+.pictopline p.pleft span{ margin-right:20px;}
+.pictopline p.pleft span i{ margin-right:5px;}
+.pictopline p.pright{ float:right;}
+.pictopline p.pright span{ margin-left:20px;}
+.pictopline p.pright span a{ color:#9f9f9f;}
+.pictopline p.pright span a:hover{ color:#c39;}
+
+.picsbox{ position:relative; width:960px; padding-bottom:20px; border-bottom:1px solid #E8E8E8;}
+.picsboxcenter{ text-align:center;}
+.picsbox p{ margin-top:20px; text-align:center;}
+.picsbox img{ max-width:960px;}
+.picpege a{ display:block; background:url(../img/jiantoubg_2.png) no-repeat; width:37px; height:63px; overflow:hidden; position:absolute; text-indent:-9999px;}
+.picpege a.pre{ background-position:0px 0px; left:0px; top:300px;}
+.picpege a.pre:hover{ background-position:0px -63px;}
+.picpege a.next{ background-position:-37px 0px; right:0px; top:300px;}
+.picpege a.next:hover{ background-position:-37px -63px;}
+.pictext{ width:800px;margin:20px auto;padding:20px; font:normal 16px/30px "微软雅黑";color:#333; text-align:left; text-indent:2em;background:#f8f8f8}
+.pictext p{ text-align:left;}
+
+
+.picbottomline{  height:30px; line-height:30px; padding-top:9px; color:#9f9f9f;}
+.picbottomline p i{ display:inline-block; width:30px; height:30px; background:url(../img/iconbg_2.png) no-repeat;  _background:url(../img/iconbg.gif) no-repeat; vertical-align:middle; overflow:hidden;}
+.picbottomline p i.icon-tags{ background-position:0px -240px; margin-right:10px;}
+.picbottomline p i.icon-eyes{ background-position:0px -272px;}
+.picbottomline p.pleft{ float:left;}
+.picbottomline p.pleft span{ font-size:14px;}
+.picbottomline p.pleft span a{ display:inline-block; height:22px; line-height:22px; padding:0px 7px; margin-left:10px; background-color:#F6F6F6; color:#9F9F9F; border-radius:3px; font-size:12px;}
+.picbottomline p.pleft span a:hover{ background-color:#9F9F9F; color:#fff;}
+.picbottomline p.pright{ float:right;}
+.picbottomline p.pright span{ margin-left:10px;}
+.picbottomline p.pright span i{ margin-right:3px;}
+.picbottomline p.pright .zan a{ display:inline-block; padding:0px 5px; height:28px; line-height:28px; background-color:#9F9F9F; color:#fff; border-radius:4px; }
+.picbottomline p.pright .zan a i.icon-good{ background-position:0px -331px;width:30px;}
+.picbottomline p.pright .zan a:hover,.picbottomline p.pright .zan  a.addon{  background-color:#FD6274;}
+.picbottomline p.pright .zan a b{ font-weight:normal;color:#fff;margin-left:-5px}
+
+
+
+/* 图片行 */
+.picsline{ margin-top:20px;}
+.picsleft{ width:644px; float:left; border-right:1px solid #E8E8E8; position:relative;}
+.picsleft .picstab{ position:absolute; left:-41px; top:0px; z-index:5;}
+.picsleft .picstab a{ display:block; background:url(../img/tagbg_2.gif) no-repeat; width:46px; text-indent:-9999px;}
+.picsleft .picstab a.upbtn{ height:99px; background-position:-47px 0px;}
+.picsleft .picstab a.downbtn{ height:108px; background-position:0px -99px;}
+.picsleft .picstab a.onupbtn{ height:99px; background-position:0px 0px !important;}
+.picsleft .picstab a.ondownbtn{ height:108px; background-position:-47px -99px !important;}
+.picscontent{ width:644px; height:527px; overflow:hidden;}
+.picscontent ul li{ float:left; width:188px; height:251px; overflow:hidden; position:relative; margin-right:25px; margin-bottom:25px;}
+.picscontent ul li a img{ width:188px; height:251px;}
+.picscontent ul li.hover a p{ position:absolute; left:0px; bottom:0px; height:40px; line-height:40px; color:#fff; text-align:center; width:188px; overflow:hidden;}
+.picscontent ul li.hover a p.titbg{ background-color:#000; filter:alpha(opacity=60); opacity:0.6;}
+.shijiancontent{ width:644px; height:527px; overflow:hidden;}
+.shijiancontent ul{ padding:0px 19px;}
+.shijiancontent ul li{ height:122px; margin-bottom:10px;}
+.shijiancontent ul li a{ cursor:pointer;}
+.shijiancontent ul li a h3{ font-family:"Microsoft Yahei", simsun; color:#333; font-size:16px; height:32px; line-height:32px; overflow:hidden; font-weight:normal;}
+.shijiancontent ul li a:hover h3{ color:#c39;}
+.shijiancontent ul li img{ width:135px; height:90px; float:left; margin-right:24px;}
+.shijiancontent ul li a p{ color:#888; text-indent:2em; line-height:22px; height:90px; overflow:hidden; float:left;}
+.shijiancontent ul li a p b{ color:#c39; font-weight:normal;}
+.picsright{ width:325px; padding-left:30px; float:right; border-left:1px solid #E8E8E8; margin-left:-1px;}
+.picsright .picbox{ width:325px; height:270px; overflow:hidden;}
+.picsright ul{ width:340px;}
+.picsright ul li{ float:left; position:relative; width:155px; height:120px; overflow:hidden; margin-right:15px; margin-bottom:15px;}
+.picsright ul li a img{ width:155px; height:120px;}
+.picsright ul li a p{ position:absolute; bottom:0px; left:0px; height:23px; line-height:23px; width:155px; overflow:hidden; color:#fff; text-align:center;}
+.picsright ul li a p.titbg{ background-color:#000; filter:alpha(opacity=60); opacity:0.6;}
+.picsright ul li.hover i{ display:block; width:155px; height:120px; background-color:#fff; position:absolute; top:0px; left:0px; filter:alpha(opacity=20); opacity:0.2; cursor:pointer;}
+.picsright h3{ font-family:"Microsoft Yahei", simsun; font-size:18px; color:#333; border-bottom:1px solid #E8E8E8; font-weight:normal; height:34px; line-height:34px;}
+.picsright h3 a{ float:right; color:#888; font-size:12px; font-family:simsun;}
+.picsright h3 a:hover{ color:#c39;}
+.picsright ol li{ height:27px; line-height:27px; overflow:hidden; color:#666; border-bottom:1px dashed #E8E8E8;}
+.picsright ol li i{ font-family:"Microsoft Yahei", simsun; margin-right:10px; font-style:italic;}
+.picsright ol li i.qian1,.picsright ol li i.qian2,.picsright ol li i.qian3{ color:#FF5B90;}
+
+.bizhipic h2{ text-indent:-9999px; background:url(../img/bgtit_2.png) no-repeat 0px -114px; height:57px; line-height:57px;}
+.bizhipic{ width:1000px; overflow:hidden;}
+.bizhipic ul{ width:1020px;}
+.bizhipic ul li{ float:left; margin-right:15px;}
+.bizhipic ul li a{ display:block; /*height:159px;*/ width:188px; overflow:hidden;}
+.bizhipic ul li a span{ width:188px; /*height:117px;*/display:block;overflow:hidden;}
+.bizhipic ul li a img{ width:188px; }
+.bizhipic ul li a p{ height:43px; line-height:43px; text-align:center; overflow:hidden; background-color:#fff; color:#5d5d5d;}
+.bizhipic ul li a:hover p{color:#cc3399;}
+
+.jingxuanpic h2{ text-indent:-9999px; background:url(../img/bgtit_2.png) no-repeat 0px -57px; height:57px; line-height:57px;}
+.jingxuanpic{ width:1000px; overflow:hidden;}
+.jingxuanpic ul{ width:1020px;}
+.jingxuanpic ul li{ float:left; margin-right:15px; margin-bottom:10px;}
+.jingxuanpic ul li a{ display:block; height:293px; width:188px; overflow:hidden;}
+.jingxuanpic ul li a img{ width:188px; height:251px;}
+.jingxuanpic ul li a p{ height:43px; line-height:43px; text-align:center; overflow:hidden; background-color:#fff; color:#5d5d5d;}
+.jingxuanpic ul li a:hover p{ background-color:#f7f7f7; color:#c39;}
+
+
+
+.advline{padding:0px 80px;text-align: center;margin:0px auto; color:#ddd;}
+.advline .adv360300{width:360px;overflow:hidden;border:1px solid #e8e8e8;}
+.advline .fl{float:left;}
+.advline .fr{float:right;}
+.itempage{display:none;}
+
+
+
+
+
+

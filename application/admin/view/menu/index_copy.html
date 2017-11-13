@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>管理栏目</title>
+<link rel="stylesheet" href="__STATIC__/admin/adminstyle/1/adminstyle.css" type="text/css">
+<script type="text/javascript" src="__STATIC__/admin/js/jquery.min.js"></script>
+<script lanuage="JScript">
+function turnit(ss)
+{
+ if (ss.style.display=="") 
+  ss.style.display="none";
+ else
+  ss.style.display=""; 
+}
+var newWindow = null
+
+//调用地址
+function tvurl(classid){
+	window.open('view/ClassUrl.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&classid='+classid,'','width=500,height=250');
+}
+//刷新栏目
+function relist(classid){
+	self.location.href='enews.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&rhash_Yk3d=ARZp0FkHvEfi&enews=ReListHtml&from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&classid='+classid;
+}
+//刷新信息
+function renews(classid,tbname){
+	window.open('ReHtml/DoRehtml.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&rhash_Yk3d=ARZp0FkHvEfi&enews=ReNewsHtml&from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&classid='+classid+'&tbname[]='+tbname);
+}
+//归档
+function docinfo(classid){
+	if(confirm('确认归档?'))
+	{
+		self.location.href='ecmsinfo.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&rhash_Yk3d=ARZp0FkHvEfi&enews=InfoToDoc&ecmsdoc=1&docfrom=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&classid='+classid;
+	}
+}
+//刷新JS
+function rejs(classid){
+	self.location.href='ecmschtml.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&rhash_Yk3d=ARZp0FkHvEfi&enews=ReSingleJs&doing=0&classid='+classid;
+}
+//复制
+function copyc(classid){
+	self.location.href='AddClass.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&classid='+classid+'&enews=AddClass&docopy=1';
+}
+//修改
+function editc(classid){
+	self.location.href='AddClass.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&classid='+classid+'&enews=EditClass';
+}
+//删除
+function delc(classid){
+	if(confirm('确认要删除此栏目，将删除所属子栏目及信息'))
+	{
+		self.location.href='ecmsclass.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&rhash_Yk3d=ARZp0FkHvEfi&classid='+classid+'&enews=DelClass';
+	}
+}
+//标题分类
+function ttc(classid){
+	window.open('ClassInfoType.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&classid='+classid);
+}
+//发布信息
+function addi(classid){
+	window.open('AddNews.php?&ehash_sGB4=08EjpWMvn4cSnBPttrf3&enews=AddNews&classid='+classid);
+}
+</script>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tbody><tr> 
+    <td width="18%">位置: <a href="ListClass.php?ehash_sGB4=08EjpWMvn4cSnBPttrf3">管理栏目</a></td>
+    <td width="82%"> <div align="right" class="emenubutton">
+        <input type="button" name="Submit6" value="增加栏目" onclick="self.location.href='AddClass.php?enews=AddClass&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3'">
+        <input type="button" name="Submit" value="刷新首页" onclick="self.location.href='ecmschtml.php?enews=ReIndex&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi'">
+        <input type="button" name="Submit2" value="刷新所有栏目页" onclick="window.open('ecmschtml.php?enews=ReListHtml_all&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
+        <input type="button" name="Submit3" value="刷新所有信息页面" onclick="window.open('ReHtml/DoRehtml.php?enews=ReNewsHtml&amp;start=0&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
+        <input type="button" name="Submit4" value="刷新所有JS调用" onclick="window.open('ecmschtml.php?enews=ReAllNewsJs&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
+      </div></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" class="tableborder">
+  <form name="editorder" method="post" action="ecmsclass.php" onsubmit="return confirm('确认要操作?');"></form>
+  <input type="hidden" name="ehash_sGB4" value="08EjpWMvn4cSnBPttrf3"><input type="hidden" name="rhash_Yk3d" value="ARZp0FkHvEfi">    
+  <tbody>
+    <tr class="header" height="25"> 
+      <td width="5%" align="center">顺序</td>
+      <td width="7%" align="center"><a href="ListClass.php?doopen=1&amp;open=1&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3" title="收缩"><img src="__STATIC__/admin/images/displayadd.gif" width="15" height="15" border="0"></a></td>
+      <td width="6%" align="center">ID</td>
+      <td width="36%">栏目名</td>
+      <td width="6%" align="center">访问</td>
+      <td width="14%">栏目管理</td>
+      <td width="29%">操作</td>
+    </tr>
+   
+  </tbody>
+
+
+
+  <!-- 一级菜单 -->
+<tbody>
+  <tr bgcolor="#DBEAF5" height="25">
+    <td><input type="text" name="myorder[]" value="0" size="2"><input type="hidden" name="classid[]" value="9"></td>
+    <td onmouseup="turnit(classdiv9);" style="CURSOR:hand"><img src="__STATIC__/admin/images/dir.gif"></td><td align="center">9</td>
+    <td><input type="checkbox" name="reclassid[]" value="9"> <a href="/info/" target="_blank">分类信息</a></td>
+    <td align="center">0</td>
+    <td><a href="#e" onclick="editc(9)">修改</a> <a href="#e" onclick="copyc(9)">复制</a> <a href="#e" onclick="delc(9)">删除</a>
+    </td>
+    <td><a href="#e" onclick="relist(9)">刷新</a> <a href="#e" onclick="renews(9,'info')">信息</a> <a href="#e" onclick="rejs(9)">JS</a> <a href="#e" onclick="tvurl(9)">调用</a>
+    </td>
+  </tr>
+</tbody>
+
+
+  <!-- 一级菜单 /-->
+ <!-- 二级菜单 -->
+ 
+  <tbody id="classdiv9">
+
+
+    <tr bgcolor="#ffffff" height="25">
+      <td>
+      <input type="text" name="myorder[]" value="0" size="2">
+      <input type="hidden" name="classid[]" value="10">
+      </td>
+      <td onmouseup="turnit(classdiv9c);">&nbsp;&nbsp;&nbsp;<img src="__STATIC__/admin/images/dir.gif"></td>
+      <td align="center">10</td>
+      <td><input type="checkbox" name="reclassid[]" value="10"> <a href="/e/action/ListInfo/?classid=10" target="_blank">房屋信息</a>
+      </td>
+      <td align="center">0</td><td><a href="#e" onclick="editc(10)">修改</a> <a href="#e" onclick="copyc(10)">复制</a> <a href="#e" onclick="delc(10)">删除</a></td><td><a href="#e" onclick="relist(10)">刷新</a> <a href="#e" onclick="renews(10,'info')">信息</a> <a href="#e" onclick="rejs(10)">JS</a> <a href="#e" onclick="tvurl(10)">调用</a>
+      </td>
+    </tr>
+
+     <!-- 三级菜单 -->
+
+  <tbody id="classdiv9c">
+    <tr bgcolor="#ffffff" height="25">
+      <td>
+        <input type="text" name="myorder[]" value="0" size="2">
+        <input type="hidden" name="classid[]" value="11">
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#e" onclick="addi(11)"><img src="__STATIC__/admin/images/txt.gif" border="0"></a>
+      </td>
+      <td align="center">11</td>
+      <td><input type="checkbox" name="reclassid[]" value="11"> <a href="/e/action/ListInfo/?classid=11" target="_blank">房屋求租</a></td>
+      <td align="center">0</td>
+      <td><a href="#e" onclick="editc(11)">修改</a> <a href="#e" onclick="copyc(11)">复制</a> <a href="#e" onclick="delc(11)">删除</a>
+      </td>
+      <td><a href="#e" onclick="relist(11)">刷新</a> <a href="#e" onclick="renews(11,'info')">信息</a> <a href="#e" onclick="rejs(11)">JS</a> <a href="#e" onclick="tvurl(11)">调用</a> <a href="#e" onclick="ttc(11)">分类</a> <a href="#e" onclick="docinfo(11)">归档</a>
+      </td>
+    </tr>
+  </tbody>
+  <!-- 三级菜单 /-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </tbody>
+  <!-- 二级菜单 /-->
+ 
+
+
+  
+  
+  
+
+
+    <tbody>
+      <tr class="header"> 
+      <td height="25" colspan="7"> <div align="left"> &nbsp;&nbsp;
+          <input type="submit" name="Submit5" value="修改栏目顺序" onclick="document.editorder.enews.value='EditClassOrder';document.editorder.action='ecmsclass.php';">&nbsp;&nbsp;
+          <input name="enews" type="hidden" id="enews" value="EditClassOrder">
+          <input type="submit" name="Submit7" value="刷新栏目页面" onclick="document.editorder.enews.value='GoReListHtmlMoreA';document.editorder.action='ecmschtml.php';">&nbsp;&nbsp;
+          <input type="submit" name="Submit72" value="终极栏目属性转换" onclick="document.editorder.enews.value='ChangeClassIslast';document.editorder.action='ecmsclass.php';">
+        </div></td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="25" colspan="7"><strong>终极栏目属性转换说明(只能选择单个栏目)：</strong><br>
+        如果你选择的是<font color="#FF0000">非终极栏目</font>，则转为<font color="#FF0000">终极栏目</font><font color="#666666">(此栏目不能有子栏目)</font><br>
+        如果你选择的是<font color="#FF0000">终极栏目</font>，则转为<font color="#FF0000">非终极栏目</font><font color="#666666">(请先把当前栏目的数据转移，否则会出现冗余数据)<br>
+        </font><strong>修改栏目顺序:顺序值越小越前面</strong></td>
+    </tr>
+   
+  
+</tbody>
+</table>
+
+
+
+
+</body></html>

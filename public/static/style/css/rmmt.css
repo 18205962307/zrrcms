@@ -1,0 +1,37 @@
+/* 列表 */
+.mainer{ width:1000px; margin:0 auto; overflow:hidden;}
+
+
+.jx_tit{ height:60px; margin:10px 0; font:normal 12px/60px "宋体"; color:#555;}
+.jx_tit span{ float:left; font:bold 25px/60px "微软雅黑"; margin-right:10px;}
+
+
+
+.jx_list{ overflow:hidden;position: relative;}
+#clti{display:none;position:absolute;top:0px;left:0px;z-index:2;background:#ccc url(../img/loader.gif) center 100px no-repeat;width:100%; height:100%; filter:alpha(Opacity=50);-moz-opacity:0.5;opacity: 0.5;}
+.jx_list li a img{ float:left; width:188px; height:250px; overflow:hidden;}
+
+.jx_list ul{ width:1015px;}
+.jx_list li{ float:left; width:188px; height:250px; overflow:hidden; margin-right:15px; margin-bottom:15px; position: relative;}
+
+.jx_list li em{float:left; width:188px; height:50px; overflow:hidden; background:#000; position:absolute; left:0; bottom:-25px; filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.5;}
+.jx_list li dl{ float:left; width:188px; height:50px; overflow:hidden; position:absolute; left:0; bottom:-25px;}
+.jx_list li dl dt{ float:left; width:168px; height:25px; overflow:hidden; font:normal 12px/25px "宋体"; color:#FFF; padding:0 10px;}
+.jx_list li dl dd{ float:left; background:url(../img/bgpic_2.png) no-repeat; width:60px; height:25px; line-height:25px; display:inline-block; overflow:hidden; padding-left:22px; font: normal 12px/20px "宋体"; color:#FFF;}
+
+.jx_list li a:hover em{float:left; width:188px;height:50px;overflow:hidden; background:#000; position:absolute; left:0; bottom:0; filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.5;}
+.jx_list li a:hover dl{ float:left; width:188px; height:50px; overflow:hidden; position:absolute; left:0; bottom:0;}
+.jx_list li a:hover dl dt{ float:left; width:168px; height:25px; overflow:hidden; font:normal 12px/25px "宋体"; color:#fff; padding:0 10px; /*text-decoration:underline;*/}
+
+.jx_list li .b1{ float:left; background-position:-245px -1141px; margin-left:5px;}
+.jx_list li .b2{ float:right; background-position:-245px -1162px;}
+.jx_list li.hover .b1{ background-position:-245px -1141px;}
+.jx_list li.hover .b2{ background-position:-245px -1162px;}
+
+
+
+.rand a{ float:left; width:188px; height:250px; display:block; overflow:hidden; background:url(../img/rand.jpg) no-repeat;}
+.rand a:hover{background:url(../img/rand_2.jpg) no-repeat;}
+.jx_list ul li.hover a img.defaultpic{ display:none!important;}
+.jx_list ul li.hover a img.hoverpic{ display:block!important;}
+.jx_list ul {display:none;}

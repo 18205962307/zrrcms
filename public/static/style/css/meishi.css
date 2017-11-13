@@ -1,0 +1,72 @@
+.mainer{ width:1000px; margin:0 auto;}
+.breadnav{ color:#ddd; padding:12px 0px;}
+.breadnav em{ padding:0px 5px;}
+.breadnav a{ color:#9f9f9f;}
+.breadnav a:hover{ color:#c39;}
+.tagtop{ font-family:"Microsoft Yahei", simsun; font-size:30px; color:#5d5d5d; padding-bottom:25px;border-top:1px solid #e8e8e8;}
+.tagtop em{ font-size:14px; vertical-align:top;margin-left:10px; line-height:42px; color:#999 }
+/* 列表 */
+.meishileft{ width:740px; float:left;}
+.meishiul{ width:740px;}
+.meishiul li{ padding-right:20px; float:left;}
+.meishiul li img{ width:164px;}
+.meishiul li a p{ height:40px; line-height:40px; width:164px; text-align:center; overflow:hidden; color:#666;}
+.meishiul li a:hover p{ color:#cc3399;}
+/* 内容 */
+.mainleft{ width:700px; float:left;  border-right:#eee solid 1px;padding-right:20px;overflow:hidden;}
+.mainleft h1{ font-family:"Microsoft Yahei", simsun; font-size:25px; color:#5d5d5d; font-weight:normal;}
+.pictopline{ height:30px; line-height:30px; padding:9px 0px; margin-bottom:20px; color:#9f9f9f; border-bottom:1px solid #e8e8e8;}
+.pictopline p{height:30px; line-height:30px;}
+.pictopline p i{ display:inline-block; width:20px; height:30px; background:url(../img/iconbg_2.png) no-repeat;  _background:url(../img/iconbg_2.gif) no-repeat; vertical-align:middle; overflow:hidden;}
+.pictopline p i.icon-time{ background-position:0px -93px;}
+.pictopline p i.icon-fx{ background-position:0px -124px;}
+.pictopline p.pleft{ float:left;}
+.pictopline p.pleft span{ margin-right:20px;}
+.pictopline p.pleft span i{ margin-right:5px;}
+.pictopline p.pright{ float:right;}
+.pictopline p.pright span{ margin-left:10px;}
+.pictopline p.pright span i{ margin-right:3px; width:30px;}
+.pictopline p.pright span.zan a{ display:inline-block; padding:0px 10px; height:30px; line-height:30px; background-color:#9F9F9F; color:#fff; border-radius:4px; }
+.pictopline p.pright span.zan a i.icon-good{ background-position:0px -333px;margin:0px}
+.pictopline p.pright span.zan a:hover,.pictopline p.pright span.zan a.addon{  background-color:#FD6274;}
+.pictopline p.pright span.zan a b{ font-weight:normal;margin-left:-5px}
+
+
+.foodpic{ width:700px; overflow:hidden; margin-bottom:24px;}
+.foodpic p img{ max-width:680px;text-align:center;margin:auto;}
+.foodpic p {margin-bottom:15px;}
+.foodtext p{ color:#5D5D5D; line-height:24px; margin-bottom:24px;}
+.foodtext p strong{ font-size:14px;}
+
+.tagsline{ font-size:14px; color:#9F9F9F; margin-bottom:15px;}
+.tagsline a{ display:inline-block; height:22px; line-height:22px; padding:0px 7px; margin-left:10px; background-color:#F6F6F6; color:#9F9F9F; border-radius:3px; font-size:12px;}
+.tagsline a:hover{ background-color:#9F9F9F; color:#fff;}
+
+.xihuan{ margin-top:25px; position:relative; margin-top:15px;  }
+.xihuan h3{ position:absolute; left:-28px; top:0px; background:url(../img/tagbg_2.gif) no-repeat right bottom; width:28px; height:110px; text-indent:-9999px;}
+.xihuan ul{ width:730px;}
+.xihuan ul li{ padding-right:15px;float:left;}
+.xihuan ul li img{ width:164px;}
+.xihuan ul li a p{ height:38px; line-height:38px; text-align:center; color:#666; width:164px; overflow:hidden;}
+.xihuan ul li a:hover p{ color:#cc3399;}
+
+.jingxuanpic{ border-top:#eee solid 1px;}
+.jingxuanpic h2{ text-indent:-9999px; background:url(../img/bgtit_2.png) no-repeat 0px -57px; height:57px; line-height:57px;}
+.jingxuanpic{ width:1000px; overflow:hidden;}
+.jingxuanpic ul{ width:1020px;}
+.jingxuanpic ul li{ float:left; margin-right:15px;}
+.jingxuanpic ul li a{ display:block; height:293px; width:188px; overflow:hidden;}
+.jingxuanpic ul li a img{ width:188px; height:251px;}
+.jingxuanpic ul li a p{ height:43px; line-height:43px; text-align:center; overflow:hidden; background-color:#fff; color:#5d5d5d;}
+.jingxuanpic ul li a:hover p{ background-color:#f7f7f7; color:#c39;}
+
+
+.meishiright,.mainright{ width:250px; float:right;overflow:hidden;}
+.mainright{border-left:#eee solid 1px;padding-left:29px;margin-left:-1px;}
+.tabbtn{ padding:0px 0px 5px;}
+.tabbtn span{ display:inline-block; width:125px; height:41px; line-height:36px; background:url(../img/bgpic_2.png) no-repeat 0px -1356px; font-size:14px; text-align:center;color:#fff; font-weight:bold;}
+.foodbox .meishitags a{ display:inline-block; height:22px; line-height:22px; padding:0px 7px; margin-right:10px; margin-bottom:8px; background-color:#F6F6F6; color:#9F9F9F; border-radius:3px; font-size:12px;}
+.foodbox .meishitags a:hover{ background-color:#9F9F9F; color:#fff;}
+.hotlist ul li{ height:33px; line-height:33px; overflow:hidden; font-size:14px; color:#666; border-bottom:1px dashed #E8E8E8;}
+.adv250{margin:15px 0px;}
+.adv70090{margin:15px 0px; width:700px; height:90px; display:block;  overflow:hidden; }
