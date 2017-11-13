@@ -95,8 +95,11 @@ function addi(classid){
   <tbody><tr> 
     <td width="18%">位置: <a href="">菜单管理</a></td>
     <td width="82%"> <div align="right" class="emenubutton">
-        <input type="button" name="Submit6" value="增加菜单" onclick="self.location.href='{:url('add')}'">
-       
+        <input type="button" name="Submit6" value="增加栏目" onclick="self.location.href='AddClass.php?enews=AddClass&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3'">
+        <input type="button" name="Submit" value="刷新首页" onclick="self.location.href='ecmschtml.php?enews=ReIndex&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi'">
+        <input type="button" name="Submit2" value="刷新所有栏目页" onclick="window.open('ecmschtml.php?enews=ReListHtml_all&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
+        <input type="button" name="Submit3" value="刷新所有信息页面" onclick="window.open('ReHtml/DoRehtml.php?enews=ReNewsHtml&amp;start=0&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
+        <input type="button" name="Submit4" value="刷新所有JS调用" onclick="window.open('ecmschtml.php?enews=ReAllNewsJs&amp;from=ListClass.php%3Fehash_sGB4%3D08EjpWMvn4cSnBPttrf3&amp;ehash_sGB4=08EjpWMvn4cSnBPttrf3&amp;rhash_Yk3d=ARZp0FkHvEfi','','');">
       </div></td>
   </tr>
 </tbody>
@@ -110,7 +113,7 @@ function addi(classid){
       <td width="9%" align="center">顺序</td>
       <td width="6%" align="center">ID</td>
       <td width="15%">栏目名</td>
-     
+      <td width="6%" align="center">访问</td>
       <td width="29%">操作</td>
     </tr>
    
@@ -137,7 +140,7 @@ function addi(classid){
      
      {$v1.name}
     </td>
-   
+    <td align="center">0</td>
     <td>
       <a href="#e" onclick="editc(9)">修改</a> 
       <a href="#e" onclick="copyc(9)">复制</a> 
@@ -180,7 +183,7 @@ function addi(classid){
       ?>  
     
       </td>
-      <td><a href="#e" onclick="editc(10)">修改</a> <a href="#e" onclick="copyc(10)">复制</a> <a href="#e" onclick="delc(10)">删除</a></td>
+      <td align="center">0</td><td><a href="#e" onclick="editc(10)">修改</a> <a href="#e" onclick="copyc(10)">复制</a> <a href="#e" onclick="delc(10)">删除</a></td>
     </tr>
 
     <!-- 三级菜单 -->
@@ -208,7 +211,7 @@ function addi(classid){
 
             ?>  
           </td>
-        
+          <td align="center">0</td>
           <td><a href="#e" onclick="editc(11)">修改</a> <a href="#e" onclick="copyc(11)">复制</a> <a href="#e" onclick="delc(11)">删除</a>
           </td>
          
@@ -240,8 +243,20 @@ function addi(classid){
 
 
     <tbody>
-      
-   
+      <tr class="header"> 
+      <td height="25" colspan="7"> <div align="left"> &nbsp;&nbsp;
+          <input type="submit" name="Submit5" value="修改栏目顺序" onclick="document.editorder.enews.value='EditClassOrder';document.editorder.action='ecmsclass.php';">&nbsp;&nbsp;
+          <input name="enews" type="hidden" id="enews" value="EditClassOrder">
+          <input type="submit" name="Submit7" value="刷新栏目页面" onclick="document.editorder.enews.value='GoReListHtmlMoreA';document.editorder.action='ecmschtml.php';">&nbsp;&nbsp;
+          <input type="submit" name="Submit72" value="终极栏目属性转换" onclick="document.editorder.enews.value='ChangeClassIslast';document.editorder.action='ecmsclass.php';">
+        </div></td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="25" colspan="7"><strong>终极栏目属性转换说明(只能选择单个栏目)：</strong><br>
+        如果你选择的是<font color="#FF0000">非终极栏目</font>，则转为<font color="#FF0000">终极栏目</font><font color="#666666">(此栏目不能有子栏目)</font><br>
+        如果你选择的是<font color="#FF0000">终极栏目</font>，则转为<font color="#FF0000">非终极栏目</font><font color="#666666">(请先把当前栏目的数据转移，否则会出现冗余数据)<br>
+        </font><strong>修改栏目顺序:顺序值越小越前面</strong></td>
+    </tr>
    
   
 </tbody>

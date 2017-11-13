@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\menu\index.html";i:1510558190;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -95,7 +96,7 @@ function addi(classid){
   <tbody><tr> 
     <td width="18%">位置: <a href="">菜单管理</a></td>
     <td width="82%"> <div align="right" class="emenubutton">
-        <input type="button" name="Submit6" value="增加菜单" onclick="self.location.href='{:url('add')}'">
+        <input type="button" name="Submit6" value="增加菜单" onclick="self.location.href='<?php echo url('add'); ?>'">
        
       </div></td>
   </tr>
@@ -117,25 +118,25 @@ function addi(classid){
   </tbody>
 
 <tbody>
-{volist name="list"  id="v1"}
+<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
   <!-- 一级菜单 -->
 
   <tr bgcolor="#DBEAF5" height="25">
     
-    <td onmouseup="turnit(this,'classdiv{$v1.id}');" style="CURSOR:hand">
+    <td onmouseup="turnit(this,'classdiv<?php echo $v1['id']; ?>');" style="CURSOR:hand">
       <div style="width: 10px;height:5px;float:left;">
-      {if condition="isset($v1['child'])"}
+      <?php if(isset($v1['child'])): ?>
       <img src="__STATIC__/admin/menu/close.png" class="kaiguan">
-      {/if}
+      <?php endif; ?>
      </div>
      
       <img src="__STATIC__/admin/images/dir.gif">
-      <input type="text" name="" value="{$v1.list_order}" style="width: 75px;" >
+      <input type="text" name="" value="<?php echo $v1['list_order']; ?>" style="width: 75px;" >
     </td>
-    <td align="center">{$v1.id}</td>
+    <td align="center"><?php echo $v1['id']; ?></td>
     <td>
      
-     {$v1.name}
+     <?php echo $v1['name']; ?>
     </td>
    
     <td>
@@ -147,25 +148,23 @@ function addi(classid){
   </tr>
   </tbody>
   <!-- 二级菜单 -->
-  <tbody id="classdiv{$v1.id}" style="display: none;">
-  {if condition="isset($v1['child'])"}
-
-  {volist name="v1.child"  id="v2"}
+  <tbody id="classdiv<?php echo $v1['id']; ?>" style="display: none;">
+  <?php if(isset($v1['child'])): if(is_array($v1['child']) || $v1['child'] instanceof \think\Collection || $v1['child'] instanceof \think\Paginator): $i = 0; $__LIST__ = $v1['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?>
   
     <tr bgcolor="#ffffff" height="25">
       
-      <td onmouseup="turnitSecond(this,{$v2.id});"  style="CURSOR:hand" value='0'>
+      <td onmouseup="turnitSecond(this,<?php echo $v2['id']; ?>);"  style="CURSOR:hand" value='0'>
        
           <div style="width: 10px;height:5px;float:left;padding-left:20px; ">
-            {if condition="isset($v2['child'])"}
+            <?php if(isset($v2['child'])): ?>
               <img src="__STATIC__/admin/menu/close.png" class="kaiguan">
-            {/if}
+            <?php endif; ?>
           </div>  
     
         <img src="__STATIC__/admin/images/dir.gif" >
-        <input type="text" name="" value="{$v2.list_order}" style="width: 75px;" >
+        <input type="text" name="" value="<?php echo $v2['list_order']; ?>" style="width: 75px;" >
       </td>
-      <td align="center">{$v2.id}</td>
+      <td align="center"><?php echo $v2['id']; ?></td>
       <td>
       <?php 
   
@@ -184,17 +183,16 @@ function addi(classid){
     </tr>
 
     <!-- 三级菜单 -->
-    {if condition="isset($v2['child'])"}
-    {volist name="v2.child"  id="v3"}
+    <?php if(isset($v2['child'])): if(is_array($v2['child']) || $v2['child'] instanceof \think\Collection || $v2['child'] instanceof \think\Paginator): $i = 0; $__LIST__ = $v2['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i;?>
         
-        <tr bgcolor="#ffffff" height="25" class="third{$v2.id}" style="display: none;">
+        <tr bgcolor="#ffffff" height="25" class="third<?php echo $v2['id']; ?>" style="display: none;">
           
           <td>
             <div style="width: 40px;height: 5px;float: left;"></div>
             <img src="__STATIC__/admin/images/txt.gif" border="0">
-            <input type="text" name="" value="{$v3.list_order}" style="width: 75px;" >
+            <input type="text" name="" value="<?php echo $v3['list_order']; ?>" style="width: 75px;" >
           </td>
-          <td align="center">{$v3.id}</td>
+          <td align="center"><?php echo $v3['id']; ?></td>
           <td>
             <?php 
   
@@ -213,19 +211,17 @@ function addi(classid){
           </td>
          
         </tr>
-      {/volist}
-      {/if}
+      <?php endforeach; endif; else: echo "" ;endif; endif; ?>
       <!-- 三级菜单 /-->
  
-  {/volist}
-  {/if}
+  <?php endforeach; endif; else: echo "" ;endif; endif; ?>
   </tbody>
   <!-- 二级菜单 /-->
 
   
 
 
-{/volist}
+<?php endforeach; endif; else: echo "" ;endif; ?>
 
   <!-- 一级菜单 /-->
 
