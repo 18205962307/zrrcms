@@ -8,10 +8,11 @@ class Menu extends Base
     public function index()
     {
 
-
-        $result     = Db::name('menu')->order(["list_order" => "ASC"])->select();
-       
-        $tree       = new Tree();
+        $model = model('Menu');
+        $result  = $model->order(["list_order" => "ASC"])->select();
+        $result = $result->toArray();
+      
+        $tree = new Tree();
         $list = $tree->toTree($result,'id','parent_id','child');
      	
         $this->assign('list',$list);
@@ -30,6 +31,47 @@ class Menu extends Base
         
         $menu = \think\Loader::model('Menu','service');
         return $this->fetch();
+
+    }
+
+    /**
+     * 添加保存
+     */
+    public function addSave(){
+        if(request()->isPost()){
+            $data = input('post.');
+            // pp($data);
+            $_data = [
+                'name'=>$data['name'],
+                'parent_id'=>$data['parent_id'],
+                'controller'=>$data['controller'],
+                'action'=>$data['action'],
+                'param'=>$data['param'],
+                'remark'=>$data['remark'],
+                'status'=>$data['status'],
+                'list_order'=>$data['list_order'],
+                'type'=>$data['type'],
+
+            ];
+            $model = model('Menu');
+            if($data['create']==1){
+                $r = $model->addAllData($_data);
+
+
+            }else{
+                $r = $model->addData($_data);
+            
+
+            }
+            if(!$r['code']){
+                $this->error($r['msg']);
+            }else{
+                $this->success($r['msg'],url('index'));
+
+            }
+            
+
+        }
 
     }
 }

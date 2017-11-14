@@ -1,9 +1,10 @@
 <?php
 namespace app\admin\service;
 use think\Db; 
-use tree\Tree;
-class Menu 
+use think\Model;
+class Menu extends Model
 {
-    
-    
+	public function quickAdd(){
+		
+	}
 }
