@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\menu\index.html";i:1510558190;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\menu\index.html";i:1510646258;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -140,8 +140,8 @@ function addi(classid){
     </td>
    
     <td>
-      <a href="#e" onclick="editc(9)">修改</a> 
-      <a href="#e" onclick="copyc(9)">复制</a> 
+      <a href="<?php echo url('edit',['id'=>$v1['id']]); ?>" >修改</a> 
+      <a href="<?php echo url('add',['id'=>$v1['id']]); ?>">复制</a> 
       <a href="#e" onclick="delc(9)">删除</a>
     </td>
    
@@ -179,7 +179,10 @@ function addi(classid){
       ?>  
     
       </td>
-      <td><a href="#e" onclick="editc(10)">修改</a> <a href="#e" onclick="copyc(10)">复制</a> <a href="#e" onclick="delc(10)">删除</a></td>
+      <td>
+        <a href="<?php echo url('edit',['id'=>$v2['id']]); ?>" >修改</a> 
+        <a href="<?php echo url('add',['id'=>$v2['id']]); ?>" >复制</a> 
+        <a href="#e" onclick="delc(10)">删除</a></td>
     </tr>
 
     <!-- 三级菜单 -->
@@ -207,7 +210,10 @@ function addi(classid){
             ?>  
           </td>
         
-          <td><a href="#e" onclick="editc(11)">修改</a> <a href="#e" onclick="copyc(11)">复制</a> <a href="#e" onclick="delc(11)">删除</a>
+          <td>
+            <a href="<?php echo url('edit',['id'=>$v3['id']]); ?>" >修改</a> 
+            <a href="<?php echo url('add',['id'=>$v3['id']]); ?>">复制</a> 
+            <a href="#e" onclick="delc(11)">删除</a>
           </td>
          
         </tr>

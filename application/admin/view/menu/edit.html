@@ -60,24 +60,23 @@ function CheckForm(obj)
     <td>位置：<a href="{:url('index')}">菜单管理</a>&nbsp;&gt;&nbsp;增加菜单 </td>
   </tr>
 </tbody></table>
-  <form name="form1" method="post" action="{:url('addSave')}" onsubmit="return CheckForm(document.form1);"> 
+  <form name="form1" method="post" action="{:url('editSave')}" onsubmit="return CheckForm(document.form1);"> 
   <div class="dynamic-tab-pane-control tab-pane" id="TabPane1">
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
         <tbody><tr class="header"> 
-          <td height="30" colspan="2">增加菜单</td>
+          <td height="30" colspan="2">编辑菜单</td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">菜单名称</td>
           <td> 
-            <input name="name" type="text" size="38" {if condition="isset($info['name'])"}value="{$info['name']}"{/if}> 
+            <input name="name" type="text" size="38" value="{$info.name}"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td height="25" valign="top">上级菜单</td>
           <td>
-            {if condition="isset($info['parent_id'])"}
-                <select name="parent_id" size="12"  onchange="javascript:changeitem(document.form1);" style="width:320">
+            <select name="parent_id" size="12"  onchange="javascript:changeitem(document.form1);" style="width:320">
               <option value="0" {if condition="$info['parent_id'] eq 0"} selected="selected"{/if}>一级菜单</option>
               {volist name='cat' id='v1'}
                  <option value="{$v1.id}" {if condition="$info['parent_id'] eq $v1['id']"} selected="selected"{/if}>|-{$v1.name}</option>
@@ -92,98 +91,58 @@ function CheckForm(obj)
 
               {/volist}
               </select> 
-            
-            {else/}
-                <select name="parent_id" size="12" style="width:320">
-                  <option value="0" selected="selected">一级菜单</option>
-                  {volist name='cat' id='v1'}
-                     <option value="{$v1.id}" >|-{$v1.name}</option>
-                     {if condition="isset($v1['child'])"}
-                      {volist name='v1.child' id='v2'}
-                        <option value="{$v2.id}" >&nbsp;&nbsp;|-{$v2.name}</option>
-                
-                      {/volist}
-
-                     {/if}
-
-                  {/volist}
-                  </select> 
-            {/if}
            </td>
         </tr>
-        <tr bgcolor="#FFFFFF"> 
-          <td width="23%" height="25">创建方式</td>
-          <td> 
-             <input type="radio" name="create" value="0" checked="">
-              默认
-              <input type="radio" name="create" value="1">
-              快捷
-          </td>
-        </tr>
+        
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">控制器</td>
           <td> 
-            <input name="controller" type="text" size="38" {if condition="isset($info['controller'])"}value="{$info['controller']}"{/if}> 
+            <input name="controller" type="text" size="38" value="{$info.controller}"> 
           </td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">方法</td>
           <td> 
-            <input name="action" type="text" size="38" {if condition="isset($info['action'])"}value="{$info['action']}"{/if}> 
+            <input name="action" type="text" size="38" value="{$info.action}"> 
           </td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">参数</td>
           <td> 
-            <input name="param" type="text" size="38" {if condition="isset($info['param'])"}value="{$info['param']}"{/if}> 
+            <input name="param" type="text" size="38"  value="{$info.param}"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">备注</td>
           <td> 
-            <input name="remark" type="text" size="38" {if condition="isset($info['remark'])"}value="{$info['remark']}"{/if}> 
+            <input name="remark" type="text" size="38" value="{$info.remark}"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">状态</td>
           <td> 
-            {if condition="isset($info['status'])"}
-              <input type="radio" name="status" value="1" {if condition="$info['status'] eq 1"}checked=""{/if}>
+             <input type="radio" name="status" value="1" {if condition="$info['status'] eq 1"}checked=""{/if}>
               正常 
               <input type="radio" name="status" value="0" {if condition="$info['status'] eq 0"}checked=""{/if}>
               禁用
-
-            {else/}
-             <input type="radio" name="status" value="1" checked="">
-              正常 
-              <input type="radio" name="status" value="0">
-              禁用
-            {/if}
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">是显示菜单</td>
           <td> 
-            {if condition="isset($info['type'])"}
-             <input type="radio" name="type" value="1" {if condition="$info['type'] eq 1"}checked=""{/if}>
-              是 
-              <input type="radio" name="type" value="0" {if condition="$info['type'] eq 0"}checked=""{/if}>
-              否
-            {else/}
-              <input type="radio" name="type" value="1" checked="">
+             <input type="radio" name="type" value="1" checked="">
               是 
               <input type="radio" name="type" value="0">
               否
-            {/if}  
           </td>
         </tr>
          <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">排序</td>
           <td> 
-            <input name="list_order" type="text" size="38"  {if condition="isset($info['list_order'])"}value="{$info['list_order']}"{else/}value="0"{/if}> 
+            <input name="list_order" type="text" size="38" value="0" value="{$info['list_order']}"> 
           </td>
         </tr>
           </tbody>
@@ -197,6 +156,7 @@ function CheckForm(obj)
     <tbody><tr> 
       <td width="100%" height="30">
         <div align="center"><strong> 
+          <input name="id" type="hidden" value="{$info['id']}">
           <input type="submit" name="Submit" value="提交">
           &nbsp;&nbsp;<input type="reset" name="Submit2" value="重置">
           </strong>

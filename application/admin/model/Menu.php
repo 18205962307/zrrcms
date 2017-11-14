@@ -52,14 +52,14 @@ class Menu extends Model
      * @param  [type] $data [description]
      * @return [type]       [description]
      */
-    public function editData($data){
+    public function editData($id,$data){
 
-      $result = $this->validate (true)->save ($data);
+      $result = $this->validate('Menu.edit')->where(['id'=>$id])->update($data);
 
       if($result===false){
          return ['code'=>0,'msg'=>$this->getError()];
       }
-      return ['code'=>1,'msg'=>'菜单添加成功'];
+      return ['code'=>1,'msg'=>'菜单编辑成功'];
 
     }
 

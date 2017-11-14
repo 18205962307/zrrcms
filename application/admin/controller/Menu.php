@@ -1,20 +1,11 @@
 <?php
 namespace app\admin\controller;
-use think\Db; 
-use tree\Tree;
-
 class Menu extends Base
 {
     public function index()
     {
-
-        $model = model('Menu');
-        $result  = $model->order(["list_order" => "ASC"])->select();
-        $result = $result->toArray();
-      
-        $tree = new Tree();
-        $list = $tree->toTree($result,'id','parent_id','child');
-     	
+        $menu = model('Menu','service');
+        $list = $menu->getMenuTree();
         $this->assign('list',$list);
         return $this->fetch();
         
@@ -23,13 +14,18 @@ class Menu extends Base
      * 添加菜单
      * @param integer $pid [父级ID]
      */
-    public function add($pid=0){
-        $result     = Db::name('menu')->order(["list_order" => "ASC"])->select();
-        $tree       = new Tree();
-        $list = $tree->toTree($result,'id','parent_id','child');
+    public function add(){
+        $menu = model('Menu','service');
+        $list = $menu->getMenuTree();
         $this->assign('cat',$list);
-        
-        $menu = \think\Loader::model('Menu','service');
+        $id = input('id');
+        if(!empty($id)){
+            $info = model('Menu')->where(['id'=>input('id')])->find();
+            if($info){
+                $this->assign('info',$info);
+            }
+
+        }
         return $this->fetch();
 
     }
@@ -74,4 +70,64 @@ class Menu extends Base
         }
 
     }
+    /**
+     * 编辑
+     * @return [type] [description]
+     */
+    public function edit(){
+        $id = input('id');
+        $info = model('Menu')->where(['id'=>$id])->find();
+        if($info){
+            $menu = model('Menu','service');
+            $list = $menu->getMenuTree();
+            $this->assign('cat',$list);
+            $this->assign('info',$info);
+            return $this->fetch();
+
+        }else{
+            $this->error('数据不存在',url('index'));
+        }
+        
+    }
+
+     /**
+     * 编辑保存
+     */
+    public function editSave(){
+        if(request()->isPost()){
+            $data = input('post.');
+            $info = model('Menu')->where(['id'=>$data['id']])->find();
+            if($info){
+                if($info['id']==$data['parent_id']){
+                    $this->error('上级菜单选择有误');
+
+                }
+                $_data = [
+                    'name'         => $data['name'],
+                    'parent_id'    => $data['parent_id'],
+                    'controller'   => $data['controller'],
+                    'action'       => $data['action'],
+                    'param'        => $data['param'],
+                    'remark'       => $data['remark'],
+                    'status'       => $data['status'],
+                    'list_order'   => $data['list_order'],
+                    'type'         => $data['type'],
+
+                ];
+                $model = model('Menu');
+                $r = $model->editData($data['id'],$_data);
+                if(!$r['code']){
+                    $this->error($r['msg']);
+                }else{
+                    $this->success($r['msg'],url('index'));
+
+                }
+            }else{
+                $this->error('数据不存在',url('index'));
+
+            }
+        }
+    }
+
+
 }

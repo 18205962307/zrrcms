@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\menu\add.html";i:1510647470;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\menu\edit.html";i:1510643667;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -61,24 +61,23 @@ function CheckForm(obj)
     <td>位置：<a href="<?php echo url('index'); ?>">菜单管理</a>&nbsp;&gt;&nbsp;增加菜单 </td>
   </tr>
 </tbody></table>
-  <form name="form1" method="post" action="<?php echo url('addSave'); ?>" onsubmit="return CheckForm(document.form1);"> 
+  <form name="form1" method="post" action="<?php echo url('editSave'); ?>" onsubmit="return CheckForm(document.form1);"> 
   <div class="dynamic-tab-pane-control tab-pane" id="TabPane1">
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
         <tbody><tr class="header"> 
-          <td height="30" colspan="2">增加菜单</td>
+          <td height="30" colspan="2">编辑菜单</td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">菜单名称</td>
           <td> 
-            <input name="name" type="text" size="38" <?php if(isset($info['name'])): ?>value="<?php echo $info['name']; ?>"<?php endif; ?>> 
+            <input name="name" type="text" size="38" value="<?php echo $info['name']; ?>"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td height="25" valign="top">上级菜单</td>
           <td>
-            <?php if(isset($info['parent_id'])): ?>
-                <select name="parent_id" size="12"  onchange="javascript:changeitem(document.form1);" style="width:320">
+            <select name="parent_id" size="12"  onchange="javascript:changeitem(document.form1);" style="width:320">
               <option value="0" <?php if($info['parent_id'] == 0): ?> selected="selected"<?php endif; ?>>一级菜单</option>
               <?php if(is_array($cat) || $cat instanceof \think\Collection || $cat instanceof \think\Paginator): $i = 0; $__LIST__ = $cat;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                  <option value="<?php echo $v1['id']; ?>" <?php if($info['parent_id'] == $v1['id']): ?> selected="selected"<?php endif; ?>>|-<?php echo $v1['name']; ?></option>
@@ -88,93 +87,58 @@ function CheckForm(obj)
 
                   <?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; ?>
               </select> 
-            
-            <?php else: ?>
-                <select name="parent_id" size="12" style="width:320">
-                  <option value="0" selected="selected">一级菜单</option>
-                  <?php if(is_array($cat) || $cat instanceof \think\Collection || $cat instanceof \think\Paginator): $i = 0; $__LIST__ = $cat;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
-                     <option value="<?php echo $v1['id']; ?>" >|-<?php echo $v1['name']; ?></option>
-                     <?php if(isset($v1['child'])): if(is_array($v1['child']) || $v1['child'] instanceof \think\Collection || $v1['child'] instanceof \think\Paginator): $i = 0; $__LIST__ = $v1['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?>
-                        <option value="<?php echo $v2['id']; ?>" >&nbsp;&nbsp;|-<?php echo $v2['name']; ?></option>
-                
-                      <?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-                  </select> 
-            <?php endif; ?>
            </td>
         </tr>
-        <tr bgcolor="#FFFFFF"> 
-          <td width="23%" height="25">创建方式</td>
-          <td> 
-             <input type="radio" name="create" value="0" checked="">
-              默认
-              <input type="radio" name="create" value="1">
-              快捷
-          </td>
-        </tr>
+        
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">控制器</td>
           <td> 
-            <input name="controller" type="text" size="38" <?php if(isset($info['controller'])): ?>value="<?php echo $info['controller']; ?>"<?php endif; ?>> 
+            <input name="controller" type="text" size="38" value="<?php echo $info['controller']; ?>"> 
           </td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">方法</td>
           <td> 
-            <input name="action" type="text" size="38" <?php if(isset($info['action'])): ?>value="<?php echo $info['action']; ?>"<?php endif; ?>> 
+            <input name="action" type="text" size="38" value="<?php echo $info['action']; ?>"> 
           </td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">参数</td>
           <td> 
-            <input name="param" type="text" size="38" <?php if(isset($info['param'])): ?>value="<?php echo $info['param']; ?>"<?php endif; ?>> 
+            <input name="param" type="text" size="38"  value="<?php echo $info['param']; ?>"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">备注</td>
           <td> 
-            <input name="remark" type="text" size="38" <?php if(isset($info['remark'])): ?>value="<?php echo $info['remark']; ?>"<?php endif; ?>> 
+            <input name="remark" type="text" size="38" value="<?php echo $info['remark']; ?>"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">状态</td>
           <td> 
-            <?php if(isset($info['status'])): ?>
-              <input type="radio" name="status" value="1" <?php if($info['status'] == 1): ?>checked=""<?php endif; ?>>
+             <input type="radio" name="status" value="1" <?php if($info['status'] == 1): ?>checked=""<?php endif; ?>>
               正常 
               <input type="radio" name="status" value="0" <?php if($info['status'] == 0): ?>checked=""<?php endif; ?>>
               禁用
-
-            <?php else: ?>
-             <input type="radio" name="status" value="1" checked="">
-              正常 
-              <input type="radio" name="status" value="0">
-              禁用
-            <?php endif; ?>
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">是显示菜单</td>
           <td> 
-            <?php if(isset($info['type'])): ?>
-             <input type="radio" name="type" value="1" <?php if($info['type'] == 1): ?>checked=""<?php endif; ?>>
-              是 
-              <input type="radio" name="type" value="0" <?php if($info['type'] == 0): ?>checked=""<?php endif; ?>>
-              否
-            <?php else: ?>
-              <input type="radio" name="type" value="1" checked="">
+             <input type="radio" name="type" value="1" checked="">
               是 
               <input type="radio" name="type" value="0">
               否
-            <?php endif; ?>  
           </td>
         </tr>
          <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">排序</td>
           <td> 
-            <input name="list_order" type="text" size="38"  <?php if(isset($info['list_order'])): ?>value="<?php echo $info['list_order']; ?>"<?php else: ?>value="0"<?php endif; ?>> 
+            <input name="list_order" type="text" size="38" value="0" value="<?php echo $info['list_order']; ?>"> 
           </td>
         </tr>
           </tbody>
@@ -188,6 +152,7 @@ function CheckForm(obj)
     <tbody><tr> 
       <td width="100%" height="30">
         <div align="center"><strong> 
+          <input name="id" type="hidden" value="<?php echo $info['id']; ?>">
           <input type="submit" name="Submit" value="提交">
           &nbsp;&nbsp;<input type="reset" name="Submit2" value="重置">
           </strong>
