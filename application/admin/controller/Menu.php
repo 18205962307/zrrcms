@@ -2,6 +2,10 @@
 namespace app\admin\controller;
 class Menu extends Base
 {
+    /**
+     * 列表
+     * @return [type] [description]
+     */
     public function index()
     {
         $menu = model('Menu','service');
@@ -127,6 +131,31 @@ class Menu extends Base
 
             }
         }
+    }
+    /**
+     * 删除菜单
+     * @return [type] [description]
+     */
+    public function delete(){
+        $id = input('id');
+        $info = model('Menu')->where(['parent_id'=>$id])->select();
+        if(!$info->isEmpty()){
+            $this->error('请先删除子菜单');
+
+
+        }else{
+            $r = model('Menu')->where(['id'=>$id])->delete();
+            if($r){
+                $this->success('删除成功',url('index'));
+
+            }else{
+                $this->error('删除失败');
+            }
+
+
+        }
+
+
     }
 
 

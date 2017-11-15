@@ -141,7 +141,7 @@ function addi(classid){
     <td>
       <a href="{:url('edit',['id'=>$v1['id']])}" >修改</a> 
       <a href="{:url('add',['id'=>$v1['id']])}">复制</a> 
-      <a href="#e" onclick="delc(9)">删除</a>
+      <a href="{:url('delete',['id'=>$v1['id']])}">删除</a>
     </td>
    
   </tr>
@@ -183,7 +183,7 @@ function addi(classid){
       <td>
         <a href="{:url('edit',['id'=>$v2['id']])}" >修改</a> 
         <a href="{:url('add',['id'=>$v2['id']])}" >复制</a> 
-        <a href="#e" onclick="delc(10)">删除</a></td>
+        <a href="{:url('delete',['id'=>$v2['id']])}">删除</a></td>
     </tr>
 
     <!-- 三级菜单 -->
@@ -215,7 +215,7 @@ function addi(classid){
           <td>
             <a href="{:url('edit',['id'=>$v3['id']])}" >修改</a> 
             <a href="{:url('add',['id'=>$v3['id']])}">复制</a> 
-            <a href="#e" onclick="delc(11)">删除</a>
+            <a href="{:url('delete',['id'=>$v3['id']])}">删除</a>
           </td>
          
         </tr>
