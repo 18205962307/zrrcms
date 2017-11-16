@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\auth_group\index.html";i:1510808745;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\auth_group\index.html";i:1510811998;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -71,7 +71,7 @@
         <div align="center">
           <a href="<?php echo url('AuthGroup/edit',['group_id'=>$vo['group_id']]); ?>">修改</a> | 
           <a href="<?php echo url('AuthGroupAccess/edit',['group_id'=>$vo['group_id']]); ?>">权限设置</a> | 
-          <a href="<?php echo url('delete'); ?>" onclick="return confirm('确认要删除？');">删除</a>
+          <a href="<?php echo url('delete',['group_id'=>$vo['group_id']]); ?>" onclick="return confirm('确认要删除？');">删除</a>
         </div>
       </td>
     </tr>

@@ -70,7 +70,7 @@
         <div align="center">
           <a href="{:url('AuthGroup/edit',['group_id'=>$vo.group_id])}">修改</a> | 
           <a href="{:url('AuthGroupAccess/edit',['group_id'=>$vo.group_id])}">权限设置</a> | 
-          <a href="{:url('delete')}" onclick="return confirm('确认要删除？');">删除</a>
+          <a href="{:url('delete',['group_id'=>$vo.group_id])}" onclick="return confirm('确认要删除？');">删除</a>
         </div>
       </td>
     </tr>

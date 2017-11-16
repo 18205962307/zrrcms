@@ -64,10 +64,7 @@ function CheckForm(obj)
 <form name="form1" method="post" action="{:url('editSave')}">
   <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
   <tbody><tr class="header"> 
-      <td height="25" colspan="2">增加用户组 
-        
-        <input name="groupid" type="hidden" id="group_id" value="1">
-        </td>
+      <td height="25" colspan="2">增加用户组 </td>
     </tr>
     <tr> 
       <td height="25" colspan="2">名称</td>
@@ -160,6 +157,7 @@ function CheckForm(obj)
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25">&nbsp;</td>
+      <input name="group_id" type="hidden" id="group_id" value="{$group_id}">
       <td height="25"><input type="submit" name="Submit" value="提交"> <input type="reset" name="Submit2" value="重置">
         <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">
         选中全部</td>

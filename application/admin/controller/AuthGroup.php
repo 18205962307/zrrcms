@@ -95,6 +95,15 @@ class AuthGroup extends Controller
      * @return [type] [description]
      */
     public function delete(){
+        $group_id = input('group_id');
+        $r = model('auth_group')->where(['group_id'=>$group_id])->delete();
+        if($r){
+            $this->success('删除成功',url('AuthGroup/index'));
+
+        }else{
+            $this->error('删除失败');
+        }
+
 
     }
 
