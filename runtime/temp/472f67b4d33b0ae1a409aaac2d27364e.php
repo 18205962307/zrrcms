@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\edit.html";i:1511151732;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -57,10 +58,10 @@ function CheckForm(obj)
 <body>
 <table width="100%" border="0" align="center" cellpadding="6" cellspacing="1">
   <tbody><tr>
-    <td>位置：<a href="{:url('index')}">管理员管理</a>&nbsp;&gt;&nbsp;增加管理员 </td>
+    <td>位置：<a href="<?php echo url('index'); ?>">管理员管理</a>&nbsp;&gt;&nbsp;增加管理员 </td>
   </tr>
 </tbody></table>
-  <form name="form1" method="post" action="{:url('addSave')}" onsubmit="return CheckForm(document.form1);"> 
+  <form name="form1" method="post" action="<?php echo url('addSave'); ?>" onsubmit="return CheckForm(document.form1);"> 
   <div class="dynamic-tab-pane-control tab-pane" id="TabPane1">
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
         <tbody><tr class="header"> 
@@ -77,9 +78,9 @@ function CheckForm(obj)
           <td width="23%" height="25" >所属角色</td>
           <td> 
             <select name="group_id" id="groupid">
-              {volist name="roler" id="vo"}
-              <option value="{$vo.group_id}">{$vo.group_name}</option> 
-              {/volist}       
+              <?php if(is_array($roler) || $roler instanceof \think\Collection || $roler instanceof \think\Paginator): $i = 0; $__LIST__ = $roler;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+              <option value="<?php echo $vo['group_id']; ?>"><?php echo $vo['group_name']; ?></option> 
+              <?php endforeach; endif; else: echo "" ;endif; ?>       
               }
             </select>
              

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\auth_group\index.html";i:1510811998;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\auth_group\index.html";i:1510812270;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -24,7 +24,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr> 
             <td width="23%"> <div align="left" class="emenubutton"> 
-                <input type=button name=button value="增加信息" onClick="self.location.href='AddNews.php?enews=AddNews&ecmsnfrom=1&bclassid=&classid='">
+                <input type=button name=button value="增加信息" onClick="self.location.href='<?php echo url('add'); ?>'">
               </div></td>
             <td width="77%" title="增加信息后使用本操作将信息显示到前台"> <div align="right"> 
                

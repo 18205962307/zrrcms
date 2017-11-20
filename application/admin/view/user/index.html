@@ -52,15 +52,19 @@
       <td width="6%" height="25">
         <div align="center">ID</div>
       </td>
-      <td width="36%" height="25"> <div align="center">标题</div></td>
+      <td width="12%" height="25"> <div align="center">用户名</div></td>
+      <td width="12%" height="25"> <div align="center">邮箱</div></td>
+      <td width="12%" height="25"> <div align="center">角色</div></td>
       <td width="14%" height="25"> <div align="center">状态</div></td>
       
       <td width="14%" height="25"> <div align="center">操作</div></td>
     </tr>
     {volist name="list" id="vo"}
     <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor='#ffffff'" onmouseover="this.style.backgroundColor='#C3EFFF'"  style="background-color: rgb(255, 255, 255);"> 
-      <td>{$vo.group_id}</td>
-      <td>{$vo.group_name}</td>
+      <td>{$vo.user_id}</td>
+      <td>{$vo.user_name}</td>
+      <td>{$vo.email}</td>
+      <td></td>
       <td>
         <div align="center">
         {if condition="$vo.status eq 1"}正常{else/}禁用{/if}
@@ -68,9 +72,9 @@
       </td>
       <td height="25"> 
         <div align="center">
-          <a href="{:url('AuthGroup/edit',['group_id'=>$vo.group_id])}">修改</a> | 
-          <a href="{:url('AuthGroupAccess/edit',['group_id'=>$vo.group_id])}">权限设置</a> | 
-          <a href="{:url('delete',['group_id'=>$vo.group_id])}" onclick="return confirm('确认要删除？');">删除</a>
+          <a href="{:url('edit',['user_id'=>$vo.user_id])}">修改</a> | 
+       
+          <a href="{:url('delete',['user_id'=>$vo.user_id])}" onclick="return confirm('确认要删除？');">删除</a>
         </div>
       </td>
     </tr>

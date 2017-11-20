@@ -5,6 +5,10 @@ use think\Model;
 use tree\Tree;
 class Menu extends Model
 {
+	/**
+	 * 获取菜单树
+	 * @return [type] [description]
+	 */
 	public function getMenuTree(){
 
 		$model = model('Menu');
@@ -16,4 +20,6 @@ class Menu extends Model
 
 
 	}
+
+
 }

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\index.html";i:1511152174;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -23,7 +24,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr> 
             <td width="23%"> <div align="left" class="emenubutton"> 
-                <input type=button name=button value="增加信息" onClick="self.location.href='{:url('add')}'">
+                <input type=button name=button value="增加信息" onClick="self.location.href='<?php echo url('add'); ?>'">
               </div></td>
             <td width="77%" title="增加信息后使用本操作将信息显示到前台"> <div align="right"> 
                
@@ -52,29 +53,33 @@
       <td width="6%" height="25">
         <div align="center">ID</div>
       </td>
-      <td width="36%" height="25"> <div align="center">标题</div></td>
+      <td width="12%" height="25"> <div align="center">用户名</div></td>
+      <td width="12%" height="25"> <div align="center">邮箱</div></td>
+      <td width="12%" height="25"> <div align="center">角色</div></td>
       <td width="14%" height="25"> <div align="center">状态</div></td>
       
       <td width="14%" height="25"> <div align="center">操作</div></td>
     </tr>
-    {volist name="list" id="vo"}
+    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
     <tr bgcolor="#FFFFFF" onmouseout="this.style.backgroundColor='#ffffff'" onmouseover="this.style.backgroundColor='#C3EFFF'"  style="background-color: rgb(255, 255, 255);"> 
-      <td>{$vo.group_id}</td>
-      <td>{$vo.group_name}</td>
+      <td><?php echo $vo['user_id']; ?></td>
+      <td><?php echo $vo['user_name']; ?></td>
+      <td><?php echo $vo['email']; ?></td>
+      <td></td>
       <td>
         <div align="center">
-        {if condition="$vo.status eq 1"}正常{else/}禁用{/if}
+        <?php if($vo['status'] == 1): ?>正常<?php else: ?>禁用<?php endif; ?>
         </div>
       </td>
       <td height="25"> 
         <div align="center">
-          <a href="{:url('AuthGroup/edit',['group_id'=>$vo.group_id])}">修改</a> | 
-          <a href="{:url('AuthGroupAccess/edit',['group_id'=>$vo.group_id])}">权限设置</a> | 
-          <a href="{:url('delete',['group_id'=>$vo.group_id])}" onclick="return confirm('确认要删除？');">删除</a>
+          <a href="<?php echo url('edit',['user_id'=>$vo['user_id']]); ?>">修改</a> | 
+       
+          <a href="<?php echo url('delete',['user_id'=>$vo['user_id']]); ?>" onclick="return confirm('确认要删除？');">删除</a>
         </div>
       </td>
     </tr>
-    {/volist}
+    <?php endforeach; endif; else: echo "" ;endif; ?>
 
     
     <tr bgcolor="#FFFFFF"> 

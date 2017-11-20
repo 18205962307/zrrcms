@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\add.html";i:1510710356;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\add.html";i:1511148576;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -58,40 +58,47 @@ function CheckForm(obj)
 <body>
 <table width="100%" border="0" align="center" cellpadding="6" cellspacing="1">
   <tbody><tr>
-    <td>位置：<a href="<?php echo url('index'); ?>">会员管理</a>&nbsp;&gt;&nbsp;增加菜单 </td>
+    <td>位置：<a href="<?php echo url('index'); ?>">管理员管理</a>&nbsp;&gt;&nbsp;增加管理员 </td>
   </tr>
 </tbody></table>
   <form name="form1" method="post" action="<?php echo url('addSave'); ?>" onsubmit="return CheckForm(document.form1);"> 
   <div class="dynamic-tab-pane-control tab-pane" id="TabPane1">
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
         <tbody><tr class="header"> 
-          <td height="30" colspan="2">增加会员</td>
+          <td height="30" colspan="2">增加管理员</td>
         </tr>
 
         <tr bgcolor="#FFFFFF"> 
-          <td width="23%" height="25" align="right">用户名</td>
+          <td width="23%" height="25" >用户名</td>
           <td> 
-            <input name="" type="text" size="38"> 
+            <input name="user_name" type="text" size="38"> 
+          </td>
+        </tr>
+         <tr bgcolor="#FFFFFF"> 
+          <td width="23%" height="25" >所属角色</td>
+          <td> 
+            <select name="group_id" id="groupid">
+              <?php if(is_array($roler) || $roler instanceof \think\Collection || $roler instanceof \think\Paginator): $i = 0; $__LIST__ = $roler;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+              <option value="<?php echo $vo['group_id']; ?>"><?php echo $vo['group_name']; ?></option> 
+              <?php endforeach; endif; else: echo "" ;endif; ?>       
+              }
+            </select>
+             
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">邮箱</td>
           <td> 
-            <input name="" type="text" size="38"> 
+            <input name="email" type="text" size="38"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">密码</td>
           <td> 
-            <input name="" type="password" size="38"> 
+            <input name="password" type="password" size="38"> 
           </td>
         </tr>
-        <tr bgcolor="#FFFFFF"> 
-          <td width="23%" height="25">确认密码</td>
-          <td> 
-            <input name="" type="password" size="38"> 
-          </td>
-        </tr>
+        
        
           </tbody>
         </table>
