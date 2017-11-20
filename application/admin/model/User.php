@@ -35,7 +35,7 @@ class User extends Model
           return ['code'=>0,'msg'=>$validate->getError()];
       }
 
-      $result = $this->validate('User.edit')->where(['user_id'=>$id])->update($data);
+      $result = $this->where(['user_id'=>$id])->update($data);
 
       if($result===false){
          return ['code'=>0,'msg'=>$this->getError()];
