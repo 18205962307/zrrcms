@@ -156,6 +156,14 @@ class User extends Controller
      * @return [type] [description]
      */
     public function delete(){
+        $user_id = input('user_id');
+        $r = model('user')->where(['user_id'=>$user_id])->delete();
+        if($r){
+            $this->success('删除成功',url('index'));
+
+        }else{
+            $this->error('删除失败');
+        }
 
     }
 
