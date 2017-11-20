@@ -53,9 +53,11 @@ class Menu extends Model
      * @return [type]       [description]
      */
     public function editData($id,$data){
-
-      $result = $this->validate('Menu.edit')->where(['id'=>$id])->update($data);
-
+      $validate = validate('Menu');
+      if (!$validate->scene('edit')->check($data)) {
+          return ['code'=>0,'msg'=>$validate->getError()];
+      }
+      $result = $this->where(['id'=>$id])->update($data);
       if($result===false){
          return ['code'=>0,'msg'=>$this->getError()];
       }

@@ -30,9 +30,12 @@ class AuthGroup extends Model
      * @return [type]       [description]
      */
     public function editData($id,$data){
+      $validate = validate('AuthGroup');
+      if (!$validate->scene('edit')->check($data)) {
+          return ['code'=>0,'msg'=>$validate->getError()];
+      }
 
-      $result = $this->validate('AuthGroup.edit')->where(['group_id'=>$id])->update($data);
-
+      $result = $this->where(['group_id'=>$id])->update($data);
       if($result===false){
          return ['code'=>0,'msg'=>$this->getError()];
       }
