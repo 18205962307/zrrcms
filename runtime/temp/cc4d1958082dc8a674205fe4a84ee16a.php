@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\add.html";i:1511148576;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\add.html";i:1511151732;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -96,6 +96,13 @@ function CheckForm(obj)
           <td width="23%" height="25">密码</td>
           <td> 
             <input name="password" type="password" size="38"> 
+          </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="23%" height="25">状态</td>
+          <td> 
+            <input name="status" type="radio" value="1" checked=""> 正常
+            <input name="status" type="radio" value="0"> 禁用
           </td>
         </tr>
         

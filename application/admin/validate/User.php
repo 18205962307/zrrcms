@@ -15,13 +15,14 @@ class User extends Validate
       'user_name.require'  =>  '用户名必须输入',
       'user_name.max'     => '用户名不能超过25个字符',
       'email' => '邮箱格式错误',
-      'user_id.require'  =>  '缺少user_id',
+      'user_id'  =>  '缺少user_id',
+      'password.require'  =>  '请输入密码',
       
    ];
 
    protected $scene = [
         'add'   =>  ['user_name','email','password'],
-        'edit'   =>  ['user_id'],
+        'edit'   => ['email'],
        
     ];    
 }

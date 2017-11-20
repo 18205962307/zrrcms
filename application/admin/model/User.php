@@ -30,6 +30,10 @@ class User extends Model
      * @return [type]       [description]
      */
     public function editData($id,$data){
+      $validate = validate('User');
+      if (!$validate->scene('edit')->check($data)) {
+          return ['code'=>0,'msg'=>$validate->getError()];
+      }
 
       $result = $this->validate('User.edit')->where(['user_id'=>$id])->update($data);
 

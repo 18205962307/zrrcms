@@ -60,7 +60,7 @@ function CheckForm(obj)
     <td>位置：<a href="{:url('index')}">管理员管理</a>&nbsp;&gt;&nbsp;增加管理员 </td>
   </tr>
 </tbody></table>
-  <form name="form1" method="post" action="{:url('addSave')}" onsubmit="return CheckForm(document.form1);"> 
+  <form name="form1" method="post" action="{:url('editSave')}" onsubmit="return CheckForm(document.form1);"> 
   <div class="dynamic-tab-pane-control tab-pane" id="TabPane1">
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
         <tbody><tr class="header"> 
@@ -70,7 +70,7 @@ function CheckForm(obj)
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25" >用户名</td>
           <td> 
-            <input name="user_name" type="text" size="38"> 
+            {$info.user_name}
           </td>
         </tr>
          <tr bgcolor="#FFFFFF"> 
@@ -88,20 +88,20 @@ function CheckForm(obj)
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">邮箱</td>
           <td> 
-            <input name="email" type="text" size="38"> 
+            <input name="email" type="text" size="38" value="{$info.email}"> 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">密码</td>
           <td> 
-            <input name="password" type="password" size="38"> 
+            <input name="password" type="password" size="38" > 
           </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td width="23%" height="25">状态</td>
           <td> 
-            <input name="status" type="radio" value="1" checked=""> 正常
-            <input name="status" type="radio" value="0"> 禁用
+            <input name="status" type="radio" value="1" {if condition="$info['status'] eq 1"}checked="" {/if}> 正常
+            <input name="status" type="radio" value="0"  {if condition="$info['status'] eq 0"}checked="" {/if}> 禁用
           </td>
         </tr>
         
@@ -117,6 +117,8 @@ function CheckForm(obj)
     <tbody><tr> 
       <td width="100%" height="30">
         <div align="center"><strong> 
+   
+          <input type="hidden" name="user_id" value="{$info.user_id}">
           <input type="submit" name="Submit" value="提交">
           &nbsp;&nbsp;<input type="reset" name="Submit2" value="重置">
           </strong>
