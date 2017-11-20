@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\index.html";i:1511152174;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\index.html";i:1511170458;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -65,7 +65,7 @@
       <td><?php echo $vo['user_id']; ?></td>
       <td><?php echo $vo['user_name']; ?></td>
       <td><?php echo $vo['email']; ?></td>
-      <td></td>
+      <td><?php echo $group[$vo['group_id']]; ?></td>
       <td>
         <div align="center">
         <?php if($vo['status'] == 1): ?>正常<?php else: ?>禁用<?php endif; ?>

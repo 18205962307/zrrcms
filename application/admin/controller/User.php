@@ -17,6 +17,11 @@ class User extends Controller
                                       ->select();
 
         $this->assign('list',$list);
+        $group = Db::name('auth_group')->order('group_id asc')->select();
+        foreach ($group as $key => $value) {
+            $_group[$value['group_id']] = $value['group_name'];
+        }
+        $this->assign('group',$_group);
         
     	return $this->fetch();
         
@@ -128,7 +133,7 @@ class User extends Controller
                 $_data['group_id'] = $data['group_id'];
                 $_data['email'] = $email;
                 $_data['status'] = $data['status'];
-                
+
                 $r = $model->editData($user_id,$_data);
                 if(!$r['code']){
                     $this->error($r['msg']);

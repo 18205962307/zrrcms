@@ -64,7 +64,7 @@
       <td>{$vo.user_id}</td>
       <td>{$vo.user_name}</td>
       <td>{$vo.email}</td>
-      <td></td>
+      <td>{$group[$vo['group_id']]}</td>
       <td>
         <div align="center">
         {if condition="$vo.status eq 1"}正常{else/}禁用{/if}

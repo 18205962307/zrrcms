@@ -78,7 +78,7 @@ function CheckForm(obj)
           <td> 
             <select name="group_id" id="groupid">
               {volist name="roler" id="vo"}
-              <option value="{$vo.group_id}">{$vo.group_name}</option> 
+              <option value="{$vo.group_id}" {if condition="$vo['group_id'] eq $info['group_id']"}selected{/if}>{$vo.group_name}</option> 
               {/volist}       
               }
             </select>

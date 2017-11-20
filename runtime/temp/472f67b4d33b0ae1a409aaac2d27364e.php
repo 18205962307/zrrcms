@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\edit.html";i:1511166359;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"D:\phpStudy\WWW\zrrcms\public/../application/admin\view\user\edit.html";i:1511170121;}*/ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -79,7 +79,7 @@ function CheckForm(obj)
           <td> 
             <select name="group_id" id="groupid">
               <?php if(is_array($roler) || $roler instanceof \think\Collection || $roler instanceof \think\Paginator): $i = 0; $__LIST__ = $roler;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-              <option value="<?php echo $vo['group_id']; ?>"><?php echo $vo['group_name']; ?></option> 
+              <option value="<?php echo $vo['group_id']; ?>" <?php if($vo['group_id'] == $info['group_id']): ?>selected<?php endif; ?>><?php echo $vo['group_name']; ?></option> 
               <?php endforeach; endif; else: echo "" ;endif; ?>       
               }
             </select>
