@@ -1,7 +1,7 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-use think\Request;
+use think\Db;
 class Login extends Controller
 {
 	/**
@@ -9,6 +9,9 @@ class Login extends Controller
 	 * @return [type] [description]
 	 */
     public function index(){
+        $user_name = input('user_name');
+        $user_name = empty($user_name) ? '' :$user_name;
+        $this->assign('user_name',$user_name);
     	return $this->fetch();
     	
 
@@ -18,12 +21,30 @@ class Login extends Controller
      * @return [type] [description]
      */
     public function postLogin(){
-    	$data = Request::instance()->post();
-    	if(!check_verify($data['vcode'],'login')){
-    		$this->error('验证码错误！');
-    	}else{
-    		$this->success('登录成功！',url('index/index'));
-    	}
+
+    	if(request()->isPost()){
+            $data = input('post.');
+            $user_name = $data['user_name'];
+        	if(!check_verify($data['vcode'],'login')){
+        		$this->error('验证码错误');
+        	}
+            $info = Db::name('user')->where(['user_name'=>$user_name])->find();
+            if(!$info){
+                $this->error('用户不存在',url('index',['user_name'=>$user_name]));
+            }else if($info['password']!=md5($data['password'].$info['encrypt'])){
+                $this->error('用户密码错误',url('index',['user_name'=>$user_name]));
+
+            }else if($info['status']=='0'){
+                $this->error('该用户已被禁用',url('index',['user_name'=>$user_name]));
+
+
+            }
+
+            session('user_info',$info);
+
+        	$this->success('登录成功',url('index/index'));
+        	
+        }
     	
 
     }
