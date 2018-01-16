@@ -5,9 +5,8 @@
  * @date : 2017.10.17
  */
 namespace app\admin\controller;
-use think\Controller;
 use think\Db;
-class User extends Controller
+class User extends Base
 
 {
     public function index()

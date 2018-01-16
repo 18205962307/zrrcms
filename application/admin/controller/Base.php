@@ -10,7 +10,7 @@ use think\Db;
 class Base extends Controller
 {
 	public function __construct(){
-	
+		
 		parent::__construct();
 
 		$user_info = session('admin_info');
@@ -19,8 +19,17 @@ class Base extends Controller
 			$this->error('请先登录',url('login/index'));
 
 		}
-		
 		//判断是否有权限
+		$user_id = $user_info['user_id'];
+		$controller = request()->controller();
+		$action = request()->action();
+		$check_access = model('Access','service')->checkUserAccess($user_id,$controller,$action);
+		if(!$check_access){
+			die('您没有权限访问！');
+
+		}
+		
+		
 	}
    
 }

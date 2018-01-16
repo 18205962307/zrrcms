@@ -40,7 +40,7 @@ class Login extends Controller
 
             }
 
-            session('user_info',$info);
+            session('admin_info',$info);
 
         	$this->success('登录成功',url('index/index'));
         	
